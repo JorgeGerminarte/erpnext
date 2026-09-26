@@ -8,8 +8,8 @@ existen; si falta alguna, se ve el marcador de color con el nombre del archivo.
 | `hero-clinica.jpg` | 16:9 · 2400×1350 | Fondo del hero (capa trasera del parallax) |
 | `planta-colgante.png` | PNG transparente · ~1600 px | Hero, rama que cuelga arriba a la derecha (la web la desenfoca) |
 | `planta-derecha.png` | PNG transparente · ~1600 px | Hero abajo a la derecha y los dos lados del umbral (la izquierda es la misma en espejo) |
-| `clinica-sala.jpg` | 4:5 · 1600×2000 | "Desde 2006", foto grande |
-| `clinica-detalle.jpg` | 1:1 · 1200×1200 | "Desde 2006", foto pequeña |
+| `clinica-sala.jpg` | 16:9 · 2000×1125 | "Desde 2006", foto grande (sala de espera) |
+| `clinica-detalle.jpg` | 1:1 · 1200×1200 | "Desde 2006", foto pequeña superpuesta (opcional: si no existe, no se muestra) |
 | `umbral-puerta.jpg` | 1:1 · 2048×2048 | El umbral: pared de la clínica con la puerta abierta. Si cambias la foto, ajusta `data-door="x y"` en `index.html` al centro del hueco (0–1) |
 | `umbral-rehab.jpg` | 1:1 · 2048×2048 | El umbral: la sala de REHAB al otro lado |
 | `rehab-sala.jpg` | 16:9 · 2000×1125 | Presentación de REHAB |
@@ -47,7 +47,7 @@ Comprime cada JPG por debajo de ~400 KB (por ejemplo con squoosh.app).
 > recortadas sobre fondo totalmente transparente, sin maceta, sin sombra, luz cálida lateral,
 > PNG con canal alfa. La base de las ramas debe tocar el borde inferior.
 
-**4. clinica-sala.jpg (4:5)**
+**4. clinica-sala.jpg (16:9)**
 > Rincón de recepción de una clínica de fisioterapia boutique: mostrador bajo de madera clara,
 > banco tapizado en lino beige, pared de estuco arena, planta grande en maceta de barro, luz
 > natural cálida lateral, composición vertical tranquila.
