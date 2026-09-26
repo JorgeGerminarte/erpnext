@@ -425,3 +425,10 @@
 .map__static.has-img { --pos: 45% 55%; }
 .map__credit { position: absolute; right: 0.5rem; bottom: 0.4rem; font-size: 0.65rem; color: #3a312a; background: rgba(255,255,255,0.75); padding: 0.1rem 0.4rem; border-radius: 3px; }
 .map__static:not(.has-img) .map__credit { display: none; }
+
+/* Instagram */
+.ig-link { display: inline-flex; align-items: center; gap: 0.45rem; text-decoration: none; }
+.ig-link:hover { text-decoration: underline; text-underline-offset: 3px; }
+.ig-link svg { width: 1.05em; height: 1.05em; flex: none; }
+.ig-row { margin-top: 0.9rem; font-size: 0.95rem; }
+@media (min-width: 820px) { .site-footer .footer-grid { grid-template-columns: 2fr 1fr 1fr 1.3fr; } }
