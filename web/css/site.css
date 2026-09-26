@@ -420,3 +420,8 @@
 .chips { display: flex; flex-wrap: wrap; gap: 0.6rem; margin: 0; padding: 0; list-style: none; }
 .chips li { padding: 0.45rem 1rem; border: 1px solid var(--c-line); border-radius: 999px; background: var(--c-surface); font-size: 0.92rem; }
 .urgent { margin-top: 1.5rem; padding: 0.9rem 1rem; border-left: 2px solid var(--c-accent-strong); background: var(--c-surface-2); font-size: 0.95rem; }
+
+/* Imagen estática del mapa: solo se ve mientras carga el mapa interactivo o si está bloqueado */
+.map__static.has-img { --pos: 45% 55%; }
+.map__credit { position: absolute; right: 0.5rem; bottom: 0.4rem; font-size: 0.65rem; color: #3a312a; background: rgba(255,255,255,0.75); padding: 0.1rem 0.4rem; border-radius: 3px; }
+.map__static:not(.has-img) .map__credit { display: none; }
