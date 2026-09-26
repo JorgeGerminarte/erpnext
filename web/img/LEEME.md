@@ -6,6 +6,7 @@ existen; si falta alguna, se ve el marcador de color con el nombre del archivo.
 | Archivo | Formato | Dónde sale |
 |---|---|---|
 | `hero-clinica.jpg` | 16:9 · 2400×1350 | Fondo del hero (capa trasera del parallax) |
+| `hero-clinica-movil.jpg` | 4:3 o vertical | Fondo del hero en móvil (encuadre con la camilla centrada) |
 | `planta-colgante.png` | PNG transparente · ~1600 px | Hero, rama que cuelga arriba a la derecha (la web la desenfoca) |
 | `planta-derecha.png` | PNG transparente · ~1600 px | Hero abajo a la derecha y los dos lados del umbral (la izquierda es la misma en espejo) |
 | `clinica-sala.jpg` | 16:9 · 2000×1125 | "Desde 2006", foto grande (sala de espera) |

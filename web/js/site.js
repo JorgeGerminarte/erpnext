@@ -30,8 +30,11 @@
       img.src = base + exts[i];
     })(0);
   }
+  var isNarrow = window.matchMedia("(max-width: 719px)").matches;
   document.querySelectorAll("[data-img]").forEach(function (el) {
-    loadFirst(el.getAttribute("data-img"), function (img) {
+    // data-img-movil: versión alternativa para pantallas estrechas (otro encuadre)
+    var src = (isNarrow && el.getAttribute("data-img-movil")) || el.getAttribute("data-img");
+    loadFirst(src, function (img) {
       el.style.backgroundImage = 'url("' + img.src + '")';
       el.classList.add("has-img");
       if (el.hasAttribute("data-door")) { doorImg = img; placeDoor(); }

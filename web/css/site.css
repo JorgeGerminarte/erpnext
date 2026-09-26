@@ -432,3 +432,6 @@
 .ig-link svg { width: 1.05em; height: 1.05em; flex: none; }
 .ig-row { margin-top: 0.9rem; font-size: 0.95rem; }
 @media (min-width: 820px) { .site-footer .footer-grid { grid-template-columns: 2fr 1fr 1fr 1.3fr; } }
+
+/* Encuadre de la foto móvil del hero: espejo iluminado detrás del texto */
+@media (max-width: 719px) { .hero .hero__bg .ph { --pos: 12% 60%; } }
