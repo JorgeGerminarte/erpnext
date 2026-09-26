@@ -159,14 +159,14 @@ ul[role="list"], ol[role="list"] { list-style: none; padding: 0; }
 .site-header .container { display: flex; align-items: center; justify-content: space-between; gap: 1.5rem; }
 .brand { text-decoration: none; display: inline-flex; flex-direction: column; line-height: 1; }
 
-.nav-list { display: none; gap: 2.25rem; align-items: center; }
+.nav-list { display: none; gap: clamp(1.25rem, 2.2vw, 2.25rem); align-items: center; }
 .nav-list a {
-  text-decoration: none; font-size: 0.78rem; letter-spacing: 0.16em; text-transform: uppercase;
+  text-decoration: none; font-size: 0.78rem; letter-spacing: 0.16em; text-transform: uppercase; white-space: nowrap;
   padding-block: 0.4rem; background: linear-gradient(currentColor, currentColor) 0 100% / 0 1px no-repeat;
   transition: background-size 0.4s var(--ease);
 }
 .nav-list a:hover { background-size: 100% 1px; }
-.header-cta { display: none; }
+.header-cta { display: none; white-space: nowrap; }
 
 .menu-toggle {
   display: inline-grid; place-items: center; width: 2.9rem; height: 2.9rem; margin-right: -0.6rem;
