@@ -140,6 +140,13 @@
 .services-intro { display: grid; gap: 1.5rem; margin-bottom: clamp(2.75rem, 8vw, 4.5rem); }
 @media (min-width: 900px) { .services-intro { grid-template-columns: 1.1fr 0.9fr; align-items: end; gap: 4rem; } }
 
+/* Tarjeta de ayuda a todo el ancho (clínica: 6 tratamientos + ayuda) */
+@media (min-width: 720px) {
+  .card--wide { grid-column: 1 / -1; display: grid; grid-template-columns: auto minmax(12rem, 18rem) 1fr auto; align-items: center; gap: 1rem 2rem; padding-block: 1.6rem; }
+  .card--wide .card__top { margin: 0; }
+  .card--wide .link-arrow { margin-top: 0 !important; }
+}
+
 /* ---------- Franja de imagen con parallax ---------- */
 .band { position: relative; margin: clamp(4.5rem, 12vw, 8rem) 0 0; height: clamp(24rem, 72vh, 44rem); overflow: hidden; isolation: isolate; }
 .band__img.ph { position: absolute; inset: -12% 0; height: auto; aspect-ratio: auto; border-radius: 0; will-change: transform;
