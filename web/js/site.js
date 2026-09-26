@@ -16,22 +16,53 @@
   setLite();
   if (reducedMotion.addEventListener) reducedMotion.addEventListener("change", setLite);
 
-  /* ---------- Imágenes con respaldo ---------- */
+  /* ---------- Imágenes con respaldo ----------
+     Se prueba el nombre indicado con .jpg, .webp y .png (lo que devuelva
+     ChatGPT vale tal cual). Si no existe ninguno, queda el marcador. */
+  function loadFirst(src, done) {
+    var base = src.replace(/\.(jpe?g|webp|png)$/i, "");
+    var exts = [src.slice(base.length) || ".jpg", ".jpg", ".webp", ".png"].filter(function (e, i, a) { return a.indexOf(e) === i; });
+    (function next(i) {
+      if (i >= exts.length) return;
+      var img = new Image();
+      img.onload = function () { done(img); };
+      img.onerror = function () { next(i + 1); };
+      img.src = base + exts[i];
+    })(0);
+  }
   document.querySelectorAll("[data-img]").forEach(function (el) {
-    var src = el.getAttribute("data-img");
-    var img = new Image();
-    img.onload = function () {
-      el.style.backgroundImage = 'url("' + src + '")';
+    loadFirst(el.getAttribute("data-img"), function (img) {
+      el.style.backgroundImage = 'url("' + img.src + '")';
       el.classList.add("has-img");
-    };
-    img.src = src;
+      if (el.hasAttribute("data-door")) { doorImg = img; placeDoor(); }
+      var scene = el.closest(".umbral");
+      if (scene && el.classList.contains("umbral__wall")) scene.classList.add("has-photo");
+    });
   });
   document.querySelectorAll(".plant-slot[data-src], .umbral__plant[data-src]").forEach(function (slot) {
-    var img = new Image();
-    img.alt = "";
-    img.onload = function () { slot.innerHTML = ""; slot.appendChild(img); };
-    img.src = slot.getAttribute("data-src");
+    loadFirst(slot.getAttribute("data-src"), function (img) {
+      img.alt = "";
+      slot.innerHTML = "";
+      slot.appendChild(img);
+      slot.classList.add("is-img");
+    });
   });
+
+  /* Punto de zoom del umbral: data-door="x y" son las coordenadas (0–1) del
+     centro del hueco en la foto. Se traducen a píxeles de pantalla teniendo en
+     cuenta el recorte de background-size: cover. */
+  var doorImg = null;
+  function placeDoor() {
+    var wall = document.querySelector(".umbral__wall[data-door]");
+    if (!wall || !doorImg) return;
+    var pt = wall.getAttribute("data-door").split(/\s+/).map(parseFloat);
+    var W = wall.clientWidth, H = wall.clientHeight;
+    var k = Math.max(W / doorImg.naturalWidth, H / doorImg.naturalHeight);
+    var iw = doorImg.naturalWidth * k, ih = doorImg.naturalHeight * k;
+    wall.style.setProperty("--door-x", ((W - iw) / 2 + pt[0] * iw).toFixed(1) + "px");
+    wall.style.setProperty("--door-y", ((H - ih) / 2 + pt[1] * ih).toFixed(1) + "px");
+  }
+  window.addEventListener("resize", placeDoor, { passive: true });
 
   /* ---------- WhatsApp según el centro ---------- */
   var WA_PHONE = "[TELÉFONO]"; // número con prefijo 34, sin espacios

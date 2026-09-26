@@ -1,6 +1,6 @@
 # Imágenes de la web
 
-Guarda aquí las imágenes con **estos nombres exactos**. La web las usa sola en cuanto
+Guarda aquí las imágenes con **estos nombres exactos** (vale .jpg, .webp o .png). La web las usa sola en cuanto
 existen; si falta alguna, se ve el marcador de color con el nombre del archivo.
 
 | Archivo | Formato | Dónde sale |
@@ -10,7 +10,7 @@ existen; si falta alguna, se ve el marcador de color con el nombre del archivo.
 | `planta-derecha.png` | PNG transparente · ~1600 px | Hero abajo a la derecha y los dos lados del umbral (la izquierda es la misma en espejo) |
 | `clinica-sala.jpg` | 4:5 · 1600×2000 | "Desde 2006", foto grande |
 | `clinica-detalle.jpg` | 1:1 · 1200×1200 | "Desde 2006", foto pequeña |
-| `umbral-puerta.jpg` | 1:1 · 2048×2048 | El umbral: pared de la clínica con la puerta abierta |
+| `umbral-puerta.jpg` | 1:1 · 2048×2048 | El umbral: pared de la clínica con la puerta abierta. Si cambias la foto, ajusta `data-door="x y"` en `index.html` al centro del hueco (0–1) |
 | `umbral-rehab.jpg` | 1:1 · 2048×2048 | El umbral: la sala de REHAB al otro lado |
 | `rehab-sala.jpg` | 16:10 · 2000×1250 | Presentación de REHAB |
 | `equipo-angel-juan.jpg`, `equipo-2.jpg`… | 4:5 | **Fotos reales** del equipo |
