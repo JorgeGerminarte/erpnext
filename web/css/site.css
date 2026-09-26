@@ -444,3 +444,8 @@
 .services-intro--photo .services-intro__text { display: grid; gap: 1.5rem; }
 .services-intro__img { --ratio: 4 / 3; --pos: 30% 40%; }
 @media (min-width: 900px) { .services-intro--photo { grid-template-columns: 1fr 1fr; align-items: center; } }
+
+/* Franja al final de una sección: pegada al borde inferior */
+.section > .band--end { margin: var(--section-y) 0 calc(var(--section-y) * -1); }
+.band__cap--right { justify-items: end; text-align: right; }
+.band--end::after { background: linear-gradient(to top, rgba(30, 26, 22, 0.85), rgba(30, 26, 22, 0) 55%), linear-gradient(to left, rgba(30, 26, 22, 0.35), rgba(30, 26, 22, 0) 50%); }

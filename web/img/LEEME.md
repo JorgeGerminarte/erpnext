@@ -14,6 +14,7 @@ existen; si falta alguna, se ve el marcador de color con el nombre del archivo.
 | `clinica-detalle.jpg` | 1:1 · 1200×1200 | "Desde 2006", foto pequeña superpuesta: foto real de una consulta (si no existe, no se muestra). Con pacientes reconocibles (aquí y en `clinica-ejercicio`), hace falta su consentimiento por escrito |
 | `clinica-ejercicio.jpg` | 16:9 · 2400×1350 | Franja a todo el ancho con parallax (etapa Clínica): rehabilitación funcional |
 | `clinica-fachada.jpg`, `rehab-fachada.jpg` | 3:2 | Fichas de los centros, encima del mapa |
+| `clinica-ecografia.jpg` | 16:9 | Franja con parallax al final de la clínica: valoración ecográfica |
 | `umbral-puerta.jpg` | 1:1 · 2048×2048 | El umbral: pared de la clínica con la puerta abierta. Si cambias la foto, ajusta `data-door="x y"` en `index.html` al centro del hueco (0–1) |
 | `umbral-rehab.jpg` | 1:1 · 2048×2048 | El umbral: la sala de REHAB al otro lado |
 | `rehab-valoracion.jpg` | 16:10 | "Cómo trabajamos": valoración inicial en REHAB |
