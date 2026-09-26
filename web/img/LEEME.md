@@ -13,6 +13,7 @@ existen; si falta alguna, se ve el marcador de color con el nombre del archivo.
 | `clinica-ejercicio.jpg` | 16:9 · 2400×1350 | Franja a todo el ancho con parallax (etapa Clínica): rehabilitación funcional |
 | `umbral-puerta.jpg` | 1:1 · 2048×2048 | El umbral: pared de la clínica con la puerta abierta. Si cambias la foto, ajusta `data-door="x y"` en `index.html` al centro del hueco (0–1) |
 | `umbral-rehab.jpg` | 1:1 · 2048×2048 | El umbral: la sala de REHAB al otro lado |
+| `rehab-valoracion.jpg` | 16:10 | "Cómo trabajamos": valoración inicial en REHAB |
 | `rehab-sala.jpg` | 16:9 · 2000×1125 | Presentación de REHAB |
 | `equipo-angel-juan.jpg`, `equipo-2.jpg` … `equipo-5.jpg` | 4:5 o similar | **Fotos reales** del equipo |
 
