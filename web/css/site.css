@@ -406,3 +406,6 @@
   #opiniones .review:nth-child(n + 4) { grid-column: span 3; }
 }
 #opiniones .review blockquote { font-size: 1.15rem; }
+
+/* Velo superior del hero: la cabecera se lee aunque la foto sea oscura arriba */
+.hero .hero__scrim::before { content: ""; position: absolute; inset: 0 0 auto 0; height: calc(var(--header-h) + 5rem); background: linear-gradient(to bottom, rgba(245, 239, 231, 0.9), rgba(245, 239, 231, 0)); }
