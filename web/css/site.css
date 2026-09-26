@@ -352,3 +352,15 @@
 .site-footer h2, .site-footer p, .site-footer li, .footer-legal { color: #b4a898; }
 .site-footer a { color: #eee7dd; }
 .site-footer :focus-visible { outline-color: #e2cfb3; }
+
+/* ---------- Plantas reales (PNG/WebP transparentes) ----------
+   Las fotos traen más aire alrededor que las dibujadas: se amplían. */
+.hero__front .plant-slot.is-img.plant-rise { width: min(62vw, 30rem); right: -12%; bottom: -5%; }
+.hero__front .plant-slot.is-img.plant-hang { width: min(92vw, 44rem); right: -10%; top: -3%; filter: blur(1.5px); }
+@media (min-width: 720px) {
+  .hero__front .plant-slot.is-img.plant-rise { width: min(36vw, 32rem); right: -2%; }
+  .hero__front .plant-slot.is-img.plant-hang { width: min(50vw, 44rem); right: -4%; }
+}
+.umbral__plant.is-img { width: min(82vw, 46rem); bottom: -8%; }
+.umbral__hint { text-shadow: 0 0 14px rgba(245, 239, 231, 0.9); }
+.umbral:not([data-step="1"]) .umbral__hint { text-shadow: 0 0 14px rgba(20, 18, 16, 0.9); }
