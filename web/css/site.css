@@ -144,9 +144,9 @@
 .since__media { position: relative; }
 .since__media .ph--main { --ratio: 16 / 9; --ph-bg: radial-gradient(ellipse 70% 45% at 30% 15%, rgba(255, 246, 230, 0.9), rgba(255, 246, 230, 0) 70%), linear-gradient(165deg, #e9ddcd, #c8b39c 70%, #a8927b); }
 /* La foto de detalle solo aparece (superpuesta) cuando existe */
-.since__media .ph--detail { --ratio: 1 / 1; position: absolute; right: 0; bottom: 0; width: 38%; border: 0.5rem solid var(--c-bg); --ph-bg: linear-gradient(150deg, #e6d8c6, #b9a38c); }
+.since__media .ph--detail { --ratio: 1 / 1; position: absolute; right: 0; bottom: 0; width: 46%; border: 0.5rem solid var(--c-bg); --ph-bg: linear-gradient(150deg, #e6d8c6, #b9a38c); }
 .since__media .ph--detail:not(.has-img) { display: none; }
-.since__media:has(.ph--detail.has-img) { padding: 0 10% 22% 0; }
+.since__media:has(.ph--detail.has-img) { padding: 0 12% 30% 0; }
 .year {
   font-family: var(--font-display); font-weight: 300; line-height: 0.8; font-variant-numeric: lining-nums;
   font-size: clamp(5.5rem, 26vw, 11rem); letter-spacing: -0.04em;
