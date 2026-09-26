@@ -65,7 +65,7 @@
 .theme-dark .btn--ghost:hover { --btn-fg: var(--c-bg); }
 
 /* ---------- Imágenes: marcador hasta que exista el archivo ---------- */
-.ph.has-img { background-size: cover; background-position: center; }
+.ph.has-img { background-size: cover; background-position: var(--pos, center); }
 .ph.has-img .ph__label { display: none; }
 .plant-slot { position: absolute; display: block; }
 .plant-slot > svg, .plant-slot > img { position: static !important; display: block; width: 100%; height: auto; }
