@@ -10,6 +10,7 @@ existen; si falta alguna, se ve el marcador de color con el nombre del archivo.
 | `planta-derecha.png` | PNG transparente · ~1600 px | Hero abajo a la derecha y los dos lados del umbral (la izquierda es la misma en espejo) |
 | `clinica-sala.jpg` | 16:9 · 2000×1125 | "Desde 2006", foto grande (sala de espera) |
 | `clinica-detalle.jpg` | 1:1 · 1200×1200 | "Desde 2006", foto pequeña superpuesta: foto real de una consulta (si no existe, no se muestra). Con pacientes reconocibles, hace falta su consentimiento por escrito |
+| `clinica-ejercicio.jpg` | 16:9 · 2400×1350 | Franja a todo el ancho con parallax (etapa Clínica): rehabilitación funcional |
 | `umbral-puerta.jpg` | 1:1 · 2048×2048 | El umbral: pared de la clínica con la puerta abierta. Si cambias la foto, ajusta `data-door="x y"` en `index.html` al centro del hueco (0–1) |
 | `umbral-rehab.jpg` | 1:1 · 2048×2048 | El umbral: la sala de REHAB al otro lado |
 | `rehab-sala.jpg` | 16:9 · 2000×1125 | Presentación de REHAB |

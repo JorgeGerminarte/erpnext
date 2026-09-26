@@ -135,6 +135,16 @@
 .services-intro { display: grid; gap: 1.5rem; margin-bottom: clamp(2.75rem, 8vw, 4.5rem); }
 @media (min-width: 900px) { .services-intro { grid-template-columns: 1.1fr 0.9fr; align-items: end; gap: 4rem; } }
 
+/* ---------- Franja de imagen con parallax ---------- */
+.band { position: relative; margin: clamp(4.5rem, 12vw, 8rem) 0 0; height: clamp(24rem, 72vh, 44rem); overflow: hidden; isolation: isolate; }
+.band__img.ph { position: absolute; inset: -12% 0; height: auto; aspect-ratio: auto; border-radius: 0; will-change: transform;
+  --ph-bg: radial-gradient(ellipse 60% 50% at 60% 30%, rgba(255, 244, 224, 0.9), rgba(255, 244, 224, 0) 70%), linear-gradient(170deg, #e9ddcd, #c3ad95); }
+.band::after { content: ""; position: absolute; inset: 0; z-index: 0; pointer-events: none; background: linear-gradient(to top, rgba(30, 26, 22, 0.72), rgba(30, 26, 22, 0) 45%); }
+.band__cap { position: absolute; z-index: 1; left: 0; right: 0; bottom: clamp(1.5rem, 5vw, 3rem); display: grid; gap: 0.5rem; color: #f5efe7; }
+.band__cap .stage { color: #e3d7c9; }
+.band__quote { font-family: "Cormorant Garamond", Georgia, serif; font-weight: 300; font-size: clamp(1.9rem, 6vw, 3.2rem); line-height: 1.1; max-width: 16ch; }
+.band .ph__label { margin-top: 1rem; }
+
 /* ---------- Desde 2006 (compacto, dentro de la etapa Clínica) ---------- */
 .since { display: grid; gap: 3rem; margin-top: clamp(4.5rem, 12vw, 8rem); }
 @media (min-width: 960px) {

@@ -133,11 +133,27 @@
     if (r.top <= 0) applyContext(p < 0.62 ? "light" : "dark", p < 0.62 ? "clinica" : "rehab");
   }
 
+  /* ---------- Franjas con parallax: data-parallax="velocidad" ---------- */
+  var bands = Array.prototype.slice.call(document.querySelectorAll("[data-parallax]"));
+  function updateBands() {
+    if (root.classList.contains("motion-lite")) return;
+    var vh = window.innerHeight;
+    bands.forEach(function (el) {
+      var box = el.parentElement.getBoundingClientRect();
+      if (box.bottom < 0 || box.top > vh) return;
+      var k = parseFloat(el.getAttribute("data-parallax")) || 0;
+      var room = box.height * 0.11; // margen que deja el inset: -12% del CSS
+      var offset = Math.max(-room, Math.min(room, (box.top + box.height / 2 - vh / 2) * -k));
+      el.style.transform = "translate3d(0," + offset.toFixed(1) + "px,0)";
+    });
+  }
+
   var ticking = false;
   function frame() {
     ticking = false;
     contextFromSections();
     updateUmbral();
+    updateBands();
   }
   function onScroll() {
     if (!ticking) { ticking = true; window.requestAnimationFrame(frame); }
