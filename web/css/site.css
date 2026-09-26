@@ -76,13 +76,16 @@
 .site-header.is-scrolled.theme-dark { background: color-mix(in srgb, #1e1c1a 86%, transparent); }
 .site-header.is-scrolled.theme-light { background: color-mix(in srgb, #f5efe7 88%, transparent); }
 
-.brand-duo { display: inline-grid; grid-template-columns: auto auto; column-gap: 0.75rem; row-gap: 0.3rem; align-items: center; text-decoration: none; line-height: 1; }
-.brand-duo__iso { grid-row: span 2; width: 2rem; height: 2rem; color: var(--c-text); }
-.site-footer .brand-duo__iso { color: #eee7dd; }
-.brand-duo__name { font-family: "Cormorant Garamond", Georgia, serif; font-size: 1.55rem; font-weight: 400; letter-spacing: 0.01em; }
+/* Logotipo: la A de "ANGEL JUAN" es el isologo (punto + trazo) */
+.wordmark { display: inline-flex; align-items: baseline; font-family: "Jost", "Helvetica Neue", Arial, sans-serif; font-weight: 400; text-transform: uppercase; letter-spacing: 0.22em; line-height: 1; white-space: nowrap; }
+.wordmark__a { width: 0.84em; height: 0.76em; margin-right: 0.24em; fill: currentColor; align-self: baseline; transform: translateY(0.02em); }
+.brand-duo { display: inline-grid; gap: 0.45rem; text-decoration: none; line-height: 1; }
+.brand-duo .wordmark { font-size: 1.05rem; }
 .brand-duo__subs { display: flex; gap: 0.7rem; align-items: center; font-size: 0.56rem; letter-spacing: 0.36em; text-transform: uppercase; color: var(--c-muted); }
 .brand-duo__subs i { width: 1px; height: 0.7rem; background: currentColor; opacity: 0.5; }
-.theme-dark .brand-duo__name { font-family: "Jost", sans-serif; font-weight: 300; font-size: 1.25rem; letter-spacing: 0.18em; text-transform: uppercase; }
+.logo-clinica { display: inline-grid; justify-items: center; gap: 0.6rem; justify-self: start; }
+.wordmark--lg { font-size: clamp(1.5rem, 6.5vw, 2.3rem); }
+.logo-clinica__sub { font-family: "Jost", sans-serif; font-size: clamp(0.62rem, 2.4vw, 0.85rem); letter-spacing: 0.4em; margin-right: -0.4em; }
 
 /* ---------- Hero ---------- */
 .hero .hero__bg .ph {
