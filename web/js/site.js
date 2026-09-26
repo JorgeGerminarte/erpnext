@@ -65,7 +65,7 @@
   window.addEventListener("resize", placeDoor, { passive: true });
 
   /* ---------- WhatsApp según el centro ---------- */
-  var WA_PHONE = "[TELÉFONO]"; // número con prefijo 34, sin espacios
+  var WA_PHONE = "34656524418"; // 656 52 44 18, con prefijo 34 y sin espacios
   var WA_TEXT = {
     clinica: "Hola, quiero pedir cita en la clínica",
     rehab: "Hola, quiero reservar mi valoración inicial en Rehab"
