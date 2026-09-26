@@ -346,8 +346,11 @@
 .chart-data th { color: var(--c-muted); }
 
 /* ---------- Equipo (4 personas, con su centro) ---------- */
-@media (min-width: 720px) { .team { grid-template-columns: repeat(2, 1fr); } }
-@media (min-width: 1080px) { .team { grid-template-columns: repeat(4, 1fr); } }
+/* Cinco personas: carrusel hasta escritorio grande, luego una fila de cinco */
+@media (min-width: 720px) and (max-width: 1079px) {
+  .team { grid-auto-flow: column; grid-template-columns: none; grid-auto-columns: 40%; gap: 1.25rem; overflow-x: auto; margin-inline: calc(var(--gutter) * -1); padding: 0.25rem var(--gutter) 1.5rem; }
+}
+@media (min-width: 1080px) { .team { grid-template-columns: repeat(5, 1fr); gap: 2.5rem 1rem; } .team .h3 { font-size: 1.3rem; } }
 .member .ph { --ph-bg: radial-gradient(ellipse 80% 25% at 50% 0%, rgba(233, 170, 92, 0.25), rgba(233, 170, 92, 0) 70%), linear-gradient(180deg, #2c2926, #45403a); }
 .member__center { display: inline-block; margin-bottom: 0.7rem; padding: 0.2rem 0.6rem; border: 1px solid var(--c-line); border-radius: 999px; font-size: 0.62rem; letter-spacing: 0.2em; text-transform: uppercase; color: var(--c-muted); }
 

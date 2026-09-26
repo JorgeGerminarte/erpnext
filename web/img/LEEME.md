@@ -14,7 +14,7 @@ existen; si falta alguna, se ve el marcador de color con el nombre del archivo.
 | `umbral-puerta.jpg` | 1:1 · 2048×2048 | El umbral: pared de la clínica con la puerta abierta. Si cambias la foto, ajusta `data-door="x y"` en `index.html` al centro del hueco (0–1) |
 | `umbral-rehab.jpg` | 1:1 · 2048×2048 | El umbral: la sala de REHAB al otro lado |
 | `rehab-sala.jpg` | 16:9 · 2000×1125 | Presentación de REHAB |
-| `equipo-angel-juan.jpg`, `equipo-2.jpg`… | 4:5 | **Fotos reales** del equipo |
+| `equipo-angel-juan.jpg`, `equipo-2.jpg` … `equipo-5.jpg` | 4:5 o similar | **Fotos reales** del equipo |
 
 Las imágenes generadas con IA son para la maqueta. Antes de publicar la web conviene
 sustituir las salas por fotos reales del local: los pacientes esperan ver el sitio al que van.
