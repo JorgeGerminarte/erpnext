@@ -270,7 +270,7 @@
 .led-rule { width: 3.5rem; height: 2px; border-radius: 2px; background: var(--c-led); box-shadow: 0 0 14px 1px var(--c-led-glow); }
 .rehab-intro { display: grid; gap: 1.6rem; margin-bottom: clamp(3rem, 9vw, 5rem); }
 @media (min-width: 900px) { .rehab-intro { grid-template-columns: 1fr 1fr; align-items: end; gap: 4rem; } }
-.rehab-intro .ph { --ratio: 16 / 10; --ph-bg: radial-gradient(ellipse 80% 25% at 50% 0%, rgba(233, 170, 92, 0.3), rgba(233, 170, 92, 0) 70%), linear-gradient(180deg, #2c2926, #45403a); }
+.rehab-intro .ph { --ratio: 16 / 9; --ph-bg: radial-gradient(ellipse 80% 25% at 50% 0%, rgba(233, 170, 92, 0.3), rgba(233, 170, 92, 0) 70%), linear-gradient(180deg, #2c2926, #45403a); }
 
 .theme-dark .card { background: linear-gradient(180deg, var(--c-surface) 0%, var(--c-bg) 140%); }
 .theme-dark .card:hover { border-color: rgba(233, 170, 92, 0.35); box-shadow: 0 0 0 1px rgba(233, 170, 92, 0.12), 0 24px 50px -30px rgba(233, 170, 92, 0.35); }
