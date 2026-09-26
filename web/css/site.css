@@ -439,3 +439,8 @@
 /* Franja al inicio de una sección: sin margen superior, con aire debajo */
 .section > .band--top { margin: calc(var(--section-y) * -1) 0 var(--section-y); }
 .band--top::after { background: linear-gradient(to top, rgba(30, 26, 22, 0.8), rgba(30, 26, 22, 0) 55%); }
+
+/* Cabecera de tratamientos con foto */
+.services-intro--photo .services-intro__text { display: grid; gap: 1.5rem; }
+.services-intro__img { --ratio: 4 / 3; --pos: 30% 40%; }
+@media (min-width: 900px) { .services-intro--photo { grid-template-columns: 1fr 1fr; align-items: center; } }

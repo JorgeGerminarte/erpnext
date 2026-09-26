@@ -9,6 +9,7 @@ existen; si falta alguna, se ve el marcador de color con el nombre del archivo.
 | `hero-clinica-movil.jpg` | 4:3 o vertical | Fondo del hero en móvil (encuadre con la camilla centrada) |
 | `planta-colgante.png` | PNG transparente · ~1600 px | Hero, rama que cuelga arriba a la derecha (la web la desenfoca) |
 | `planta-derecha.png` | PNG transparente · ~1600 px | Hero abajo a la derecha y los dos lados del umbral (la izquierda es la misma en espejo) |
+| `clinica-tratamiento.jpg` | 4:3 | Cabecera de los tratamientos de la clínica |
 | `clinica-sala.jpg` | 16:9 · 2000×1125 | "Desde 2006", foto grande (sala de espera) |
 | `clinica-detalle.jpg` | 1:1 · 1200×1200 | "Desde 2006", foto pequeña superpuesta: foto real de una consulta (si no existe, no se muestra). Con pacientes reconocibles (aquí y en `clinica-ejercicio`), hace falta su consentimiento por escrito |
 | `clinica-ejercicio.jpg` | 16:9 · 2400×1350 | Franja a todo el ancho con parallax (etapa Clínica): rehabilitación funcional |
