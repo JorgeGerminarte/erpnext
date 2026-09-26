@@ -29,7 +29,8 @@
 
   /* Ritmo */
   --gutter: 1.25rem;
-  --section-y: clamp(5rem, 14vw, 9.5rem);
+  --section-y: clamp(3.5rem, 7vw, 6rem);
+  --block-gap: clamp(2rem, 4.5vw, 3.25rem);   /* título de sección → contenido */
   --maxw: 72rem;
   --radius: 2px;
   --radius-lg: 4px;
@@ -115,7 +116,7 @@ ul[role="list"], ol[role="list"] { list-style: none; padding: 0; }
 .section--dark .lead { color: var(--c-on-dark-muted); }
 .muted { color: var(--c-muted); }
 
-.section-head { display: grid; gap: 1.25rem; margin-bottom: clamp(2.75rem, 8vw, 4.5rem); max-width: 44rem; }
+.section-head { display: grid; gap: 1rem; margin-bottom: var(--block-gap); max-width: 44rem; }
 .section-head--center { margin-inline: auto; text-align: center; justify-items: center; }
 
 /* ---------- Botones ---------- */
@@ -289,7 +290,7 @@ body.menu-open { overflow: hidden; }
 .member__meta { font-size: 0.92rem; color: var(--c-muted); margin-top: 0.75rem; }
 
 /* ---------- Reseñas ---------- */
-.reviews-head { display: flex; flex-wrap: wrap; align-items: flex-end; justify-content: space-between; gap: 1.5rem; margin-bottom: clamp(2.5rem, 7vw, 4rem); }
+.reviews-head { display: flex; flex-wrap: wrap; align-items: flex-end; justify-content: space-between; gap: 1.5rem; margin-bottom: var(--block-gap); }
 .rating { display: flex; align-items: center; gap: 1rem; }
 .rating__score { font-family: var(--font-display); font-size: 3.2rem; line-height: 1; }
 .rating__meta { font-size: 0.85rem; color: var(--c-muted); line-height: 1.5; }

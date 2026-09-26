@@ -137,7 +137,7 @@
 /* ---------- Cabeceras de etapa ---------- */
 .stage { display: inline-flex; align-items: center; gap: 0.8rem; font-size: 0.7rem; letter-spacing: 0.28em; text-transform: uppercase; color: var(--c-muted); }
 .stage b { font-weight: 500; color: var(--c-text); }
-.services-intro { display: grid; gap: 1.5rem; margin-bottom: clamp(2.75rem, 8vw, 4.5rem); }
+.services-intro { display: grid; gap: 1.5rem; margin-bottom: var(--block-gap); }
 @media (min-width: 900px) { .services-intro { grid-template-columns: 1.1fr 0.9fr; align-items: end; gap: 4rem; } }
 
 /* Tarjeta de ayuda a todo el ancho (clínica: 6 tratamientos + ayuda) */
@@ -148,7 +148,7 @@
 }
 
 /* ---------- Franja de imagen con parallax ---------- */
-.band { position: relative; margin: clamp(4.5rem, 12vw, 8rem) 0 0; height: clamp(24rem, 72vh, 44rem); overflow: hidden; isolation: isolate; }
+.band { position: relative; margin: var(--section-y) 0 0; height: clamp(22rem, 64vh, 40rem); overflow: hidden; isolation: isolate; }
 .band__img.ph { position: absolute; inset: -12% 0; height: auto; aspect-ratio: auto; border-radius: 0; will-change: transform;
   --ph-bg: radial-gradient(ellipse 60% 50% at 60% 30%, rgba(255, 244, 224, 0.9), rgba(255, 244, 224, 0) 70%), linear-gradient(170deg, #e9ddcd, #c3ad95); }
 .band::after { content: ""; position: absolute; inset: 0; z-index: 0; pointer-events: none; background: linear-gradient(to top, rgba(30, 26, 22, 0.72), rgba(30, 26, 22, 0) 45%); }
@@ -158,7 +158,7 @@
 .band .ph__label { margin-top: 1rem; }
 
 /* ---------- Desde 2006 (compacto, dentro de la etapa Clínica) ---------- */
-.since { display: grid; gap: 3rem; margin-top: clamp(4.5rem, 12vw, 8rem); }
+.since { display: grid; gap: 2.5rem; margin-top: var(--section-y); }
 @media (min-width: 960px) {
   .since { grid-template-columns: 1.2fr 1fr; gap: 5rem; align-items: center; }
   .since .since__media .ph--main { --ratio: 4 / 3; }
@@ -186,7 +186,7 @@
    EL UMBRAL — escena fija mientras se hace scroll (≈3 pantallas).
    JS escribe --p (0 → 1) y data-step (1, 2, 3). Todo lo demás es CSS.
    ========================================================================== */
-.umbral { position: relative; height: 330vh; --p: 0; background: #1e1c1a; }
+.umbral { position: relative; height: 260vh; --p: 0; background: #1e1c1a; }
 .umbral__sticky { position: sticky; top: 0; height: 100vh; height: 100svh; overflow: hidden; isolation: isolate; }
 
 /* Capa del fondo: la sala de REHAB (se revela al cruzar la puerta) */
@@ -296,7 +296,7 @@
 .lema { font-size: clamp(1.9rem, 7vw, 3.4rem); font-weight: 300; letter-spacing: -0.02em; line-height: 1.1; max-width: 16ch; }
 .lema em { font-style: normal; color: var(--c-accent-strong); }
 .led-rule { width: 3.5rem; height: 2px; border-radius: 2px; background: var(--c-led); box-shadow: 0 0 14px 1px var(--c-led-glow); }
-.rehab-intro { display: grid; gap: 1.6rem; margin-bottom: clamp(3rem, 9vw, 5rem); }
+.rehab-intro { display: grid; gap: 1.6rem; margin-bottom: var(--block-gap); }
 @media (min-width: 900px) { .rehab-intro { grid-template-columns: 1fr 1fr; align-items: end; gap: 4rem; } }
 .rehab-intro .ph { --ratio: 16 / 9; --ph-bg: radial-gradient(ellipse 80% 25% at 50% 0%, rgba(233, 170, 92, 0.3), rgba(233, 170, 92, 0) 70%), linear-gradient(180deg, #2c2926, #45403a); }
 
@@ -449,3 +449,37 @@
 .section > .band--end { margin: var(--section-y) 0 calc(var(--section-y) * -1); }
 .band__cap--right { justify-items: end; text-align: right; }
 .band--end::after { background: linear-gradient(to top, rgba(30, 26, 22, 0.85), rgba(30, 26, 22, 0) 55%), linear-gradient(to left, rgba(30, 26, 22, 0.35), rgba(30, 26, 22, 0) 50%); }
+
+/* ---------- Móvil: tarjetas compactas (icono junto al título) ---------- */
+@media (max-width: 719px) {
+  .cards { gap: 0.75rem; }
+  .card { display: grid; grid-template-columns: 2.4rem 1fr; column-gap: 1rem; row-gap: 0.6rem; padding: 1.35rem 1.25rem; }
+  .card__top { grid-row: span 1; margin: 0; align-self: start; }
+  .card__icon { width: 2.1rem; height: 2.1rem; }
+  .card .h3 { font-size: 1.3rem; align-self: center; }
+  .card > p, .card > .card__list, .card > .link-arrow { grid-column: 1 / -1; }
+  .card > .link-arrow { margin-top: 0.4rem !important; }
+  .card:hover { transform: none; }
+  .band { height: clamp(20rem, 58vh, 28rem); }
+  .year { font-size: clamp(4.5rem, 22vw, 6rem); }
+}
+
+/* El reseteo ul[role="list"] { padding: 0 } ganaba a .team: se restaura el margen interior del carrusel */
+.team[role="list"] { padding: 0.25rem var(--gutter) 1.5rem; }
+@media (min-width: 1080px) { .team[role="list"] { padding-inline: 0; } }
+/* Foto de fachada: si todavía no existe, no se muestra el hueco */
+.center-card__photo:not(.has-img) { display: none; }
+@media (min-width: 720px) { .card__top { margin-bottom: 0.4rem; } .card { gap: 0.8rem; padding: 1.75rem 1.6rem; } }
+
+/* Botón para cargar el mapa con consentimiento */
+.map iframe[data-src] { visibility: hidden; }
+.map__load {
+  position: absolute; z-index: 2; left: 50%; top: 50%; transform: translate(-50%, -50%);
+  display: grid; gap: 0.25rem; justify-items: center; padding: 0.8rem 1.3rem; cursor: pointer;
+  background: #1e1c1a; color: #f5efe7; border: 0; border-radius: var(--radius);
+  font-size: 0.78rem; font-weight: 500; letter-spacing: 0.14em; text-transform: uppercase; box-shadow: 0 10px 30px -12px rgba(0,0,0,.5);
+}
+.map__load small { font-size: 0.66rem; letter-spacing: 0.02em; text-transform: none; font-weight: 400; opacity: 0.75; }
+.map__load:hover { background: #3a312a; }
+.map:has(.map__load) .ph__label { display: none; }
+.center-card { align-content: start; }

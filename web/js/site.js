@@ -67,6 +67,20 @@
   }
   window.addEventListener("resize", placeDoor, { passive: true });
 
+  /* ---------- Mapas bajo demanda ----------
+     Google Maps instala cookies de terceros: el iframe solo se carga cuando
+     el visitante pulsa "Ver mapa". Así la web no necesita banner de cookies. */
+  document.querySelectorAll(".map__load").forEach(function (btn) {
+    btn.addEventListener("click", function () {
+      var frame = btn.parentElement.querySelector("iframe[data-src]");
+      if (!frame) return;
+      frame.src = frame.getAttribute("data-src");
+      frame.removeAttribute("data-src");
+      btn.remove();
+      frame.focus();
+    });
+  });
+
   /* ---------- WhatsApp según el centro ---------- */
   var WA_PHONE = "34656524418"; // 656 52 44 18, con prefijo 34 y sin espacios
   var WA_TEXT = {
