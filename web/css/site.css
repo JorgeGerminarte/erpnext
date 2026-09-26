@@ -373,7 +373,8 @@
 @media (min-width: 900px) { .centers { grid-template-columns: 1fr 1fr; } }
 .center-card { display: grid; gap: 1.5rem; padding: 1.25rem 1.25rem 1.75rem; border-radius: var(--radius-lg); border: 1px solid var(--c-line); background: var(--c-bg); color: var(--c-text); }
 @media (min-width: 720px) { .center-card { padding: 1.5rem 1.75rem 2rem; } }
-.center-card .map { min-height: 15rem; }
+.center-card__photo { --ratio: 3 / 2; }
+.center-card .map { min-height: 13rem; }
 .center-card .map iframe { filter: grayscale(0.85) sepia(0.18) contrast(0.95); }
 .center-card__name { font-family: var(--font-display); font-weight: var(--display-weight); font-size: 1.9rem; line-height: 1.1; }
 .center-card .info-block + .info-block { margin-top: 1.5rem; padding-top: 1.5rem; }
