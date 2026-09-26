@@ -1,0 +1,349 @@
+/* ==========================================================================
+   Ángel Juan — web única (Clínica + REHAB)
+   Capa de marca sobre /shared/base.css.
+
+   Idea: la página es el recorrido del paciente. Empieza en la luz cálida de
+   la clínica y, al cruzar "el umbral", pasa a la sala oscura con LED de REHAB.
+   Los colores y la tipografía cambian por sección con .theme-light / .theme-dark.
+   ========================================================================== */
+
+/* ---------- Tokens: Clínica (claro, por defecto) ---------- */
+:root,
+.theme-light {
+  --c-bg: #f5efe7;
+  --c-surface: #fbf8f3;
+  --c-surface-2: #ebe1d4;
+  --c-text: #3a312a;
+  --c-muted: #685a4d;
+  --c-accent: #b3a08b;
+  --c-accent-strong: #6b5a4b;
+  --c-line: rgba(74, 63, 54, 0.14);
+  --c-dark: #4a3f36;
+  --c-on-dark: #f5efe7;
+  --c-on-dark-muted: #d6cabc;
+  --c-focus: #4a3f36;
+  --ph-fg: #3a312a;
+  --ph-chip: rgba(255, 255, 255, 0.62);
+
+  --font-display: "Cormorant Garamond", "Cormorant", Georgia, serif;
+  --font-body: "Jost", "Helvetica Neue", Arial, sans-serif;
+  --display-weight: 300;
+  --display-tracking: -0.015em;
+  --eyebrow-tracking: 0.28em;
+  color-scheme: light;
+}
+
+/* ---------- Tokens: REHAB (oscuro) ---------- */
+.theme-dark {
+  --c-bg: #1e1c1a;
+  --c-surface: #272421;
+  --c-surface-2: #302c28;
+  --c-text: #eee7dd;
+  --c-muted: #b4a898;
+  --c-accent: #8c7d6c;
+  --c-accent-strong: #e2cfb3;
+  --c-line: rgba(238, 231, 221, 0.12);
+  --c-dark: #d9c8b1;          /* bloque de contraste: arena */
+  --c-on-dark: #1e1c1a;
+  --c-on-dark-muted: #574b40;
+  --c-focus: #e2cfb3;
+  --ph-fg: #eee7dd;
+  --ph-chip: rgba(20, 18, 16, 0.55);
+
+  --font-display: "Jost", "Helvetica Neue", Arial, sans-serif;
+  --display-weight: 300;
+  --display-tracking: -0.02em;
+  --eyebrow-tracking: 0.34em;
+  color-scheme: dark;
+}
+
+:root { --c-led: #bf8438; --c-led-glow: rgba(233, 170, 92, 0.55); }
+
+.theme-light, .theme-dark { background: var(--c-bg); color: var(--c-text); }
+.theme-dark .display em, .theme-dark .h2 em { font-style: normal; color: var(--c-accent-strong); }
+.theme-dark .btn:hover { --btn-bg: var(--c-accent-strong); --btn-bd: var(--c-accent-strong); --btn-fg: var(--c-bg); }
+.theme-dark .btn--ghost:hover { --btn-fg: var(--c-bg); }
+
+/* ---------- Imágenes: marcador hasta que exista el archivo ---------- */
+.ph.has-img { background-size: cover; background-position: center; }
+.ph.has-img .ph__label { display: none; }
+.plant-slot { position: absolute; display: block; }
+.plant-slot > svg, .plant-slot > img { position: static !important; display: block; width: 100%; height: auto; }
+
+/* ---------- Cabecera: se adapta al tema de la sección visible ---------- */
+.site-header { color: var(--c-text); }
+.site-header.theme-dark, .site-header.theme-light { background: transparent; }
+.site-header.is-scrolled.theme-dark { background: color-mix(in srgb, #1e1c1a 86%, transparent); }
+.site-header.is-scrolled.theme-light { background: color-mix(in srgb, #f5efe7 88%, transparent); }
+
+.brand-duo { display: inline-grid; gap: 0.3rem; text-decoration: none; line-height: 1; }
+.brand-duo__name { font-family: "Cormorant Garamond", Georgia, serif; font-size: 1.55rem; font-weight: 400; letter-spacing: 0.01em; }
+.brand-duo__subs { display: flex; gap: 0.7rem; align-items: center; font-size: 0.56rem; letter-spacing: 0.36em; text-transform: uppercase; color: var(--c-muted); }
+.brand-duo__subs i { width: 1px; height: 0.7rem; background: currentColor; opacity: 0.5; }
+.theme-dark .brand-duo__name { font-family: "Jost", sans-serif; font-weight: 300; font-size: 1.25rem; letter-spacing: 0.18em; text-transform: uppercase; }
+
+/* ---------- Hero ---------- */
+.hero .hero__bg .ph {
+  --ph-bg:
+    radial-gradient(ellipse 60% 50% at 78% 18%, rgba(255, 244, 224, 0.95), rgba(255, 244, 224, 0) 70%),
+    radial-gradient(ellipse 50% 60% at 15% 30%, rgba(214, 196, 172, 0.55), rgba(214, 196, 172, 0) 70%),
+    linear-gradient(170deg, #efe5d8 0%, #dccbb6 45%, #c3ad95 100%);
+  border-radius: 0; place-items: start start;
+}
+.hero .ph__label { margin-top: calc(var(--header-h) + 4.5rem); margin-left: var(--gutter); }
+.hero__scrim { background: linear-gradient(to top, var(--c-bg) 0%, rgba(245, 239, 231, 0.92) 30%, rgba(245, 239, 231, 0.55) 55%, rgba(245, 239, 231, 0) 78%); }
+.hero .display { max-width: 11ch; }
+.hero .lead { color: var(--c-text); opacity: 0.86; max-width: 31rem; }
+.hero__front .plant-hang { top: -2%; right: -14%; width: min(78vw, 36rem); filter: blur(2.5px); opacity: 0.9; }
+.hero__front .plant-rise { bottom: -4%; right: -6%; width: min(34vw, 17rem); }
+.hero__content { padding-bottom: clamp(8.5rem, 22vh, 11rem); }
+
+/* Las dos "puertas": una por centro */
+.doors { display: grid; gap: 0.75rem; margin-top: 2.25rem; max-width: 36rem; }
+@media (min-width: 560px) { .doors { grid-template-columns: 1fr 1fr; } }
+.door {
+  display: grid; gap: 0.35rem; padding: 1.05rem 1.2rem; text-decoration: none; border-radius: var(--radius-lg);
+  transition: transform 0.5s var(--ease), box-shadow 0.5s var(--ease);
+}
+.door:hover { transform: translateY(-3px); box-shadow: var(--shadow-soft); }
+.door small { font-size: 0.64rem; letter-spacing: 0.26em; text-transform: uppercase; opacity: 0.75; }
+.door strong { display: flex; justify-content: space-between; align-items: center; gap: 1rem; font-weight: 400; font-size: 1.02rem; }
+.door--clinica { background: rgba(251, 248, 243, 0.8); border: 1px solid var(--c-line); color: var(--c-text); -webkit-backdrop-filter: blur(8px); backdrop-filter: blur(8px); }
+.door--rehab { background: #1e1c1a; color: #eee7dd; border: 1px solid #1e1c1a; }
+.door--rehab::after { content: ""; display: block; height: 1px; margin-top: 0.4rem; background: var(--c-led); box-shadow: 0 0 10px var(--c-led-glow); width: 2.5rem; }
+
+@media (min-width: 720px) {
+  .hero__front .plant-hang { right: -6%; width: min(52vw, 40rem); }
+  .hero__front .plant-rise { right: 3%; width: min(28vw, 22rem); bottom: -6%; }
+  .hero__content { padding-bottom: clamp(7rem, 16vh, 10rem); }
+}
+@media (min-width: 1100px) {
+  .hero { align-items: center; }
+  .hero__content { padding-top: var(--header-h); padding-bottom: 0; }
+  .hero__scrim {
+    background:
+      linear-gradient(to right, rgba(245, 239, 231, 0.94) 0%, rgba(245, 239, 231, 0.7) 38%, rgba(245, 239, 231, 0) 62%),
+      linear-gradient(to top, var(--c-bg) 0%, rgba(245, 239, 231, 0) 22%);
+  }
+  .hero .hero__bg .ph { place-items: center; }
+  .hero .ph__label { margin: 0 0 0 12%; }
+}
+
+/* ---------- Cabeceras de etapa ---------- */
+.stage { display: inline-flex; align-items: center; gap: 0.8rem; font-size: 0.7rem; letter-spacing: 0.28em; text-transform: uppercase; color: var(--c-muted); }
+.stage b { font-weight: 500; color: var(--c-text); }
+.services-intro { display: grid; gap: 1.5rem; margin-bottom: clamp(2.75rem, 8vw, 4.5rem); }
+@media (min-width: 900px) { .services-intro { grid-template-columns: 1.1fr 0.9fr; align-items: end; gap: 4rem; } }
+
+/* ---------- Desde 2006 (compacto, dentro de la etapa Clínica) ---------- */
+.since { display: grid; gap: 3rem; margin-top: clamp(4.5rem, 12vw, 8rem); }
+@media (min-width: 960px) { .since { grid-template-columns: 1fr 1fr; gap: 5.5rem; align-items: center; } }
+.since__media { position: relative; padding-bottom: 18%; padding-right: 14%; }
+.since__media .ph--main { --ratio: 4 / 5; --ph-bg: radial-gradient(ellipse 70% 45% at 30% 15%, rgba(255, 246, 230, 0.9), rgba(255, 246, 230, 0) 70%), linear-gradient(165deg, #e9ddcd, #c8b39c 70%, #a8927b); }
+.since__media .ph--detail { --ratio: 1 / 1; position: absolute; right: 0; bottom: 0; width: 46%; border: 0.5rem solid var(--c-bg); --ph-bg: linear-gradient(150deg, #e6d8c6, #b9a38c); }
+.year {
+  font-family: var(--font-display); font-weight: 300; line-height: 0.8; font-variant-numeric: lining-nums;
+  font-size: clamp(5.5rem, 26vw, 11rem); letter-spacing: -0.04em;
+  color: transparent; -webkit-text-stroke: 1px var(--c-accent); margin-bottom: -0.1em; user-select: none;
+}
+.since__text { display: grid; gap: 1.4rem; }
+.since__text > p:not(.year):not(.eyebrow) { color: var(--c-muted); }
+.pillars { display: grid; margin-top: 1rem; }
+.pillars li { padding-block: 1.25rem; border-top: 1px solid var(--c-line); display: grid; gap: 0.3rem; }
+.pillars li:last-child { border-bottom: 1px solid var(--c-line); }
+.pillars strong { font-family: var(--font-display); font-weight: 400; font-size: 1.4rem; }
+.pillars span { color: var(--c-muted); font-size: 0.97rem; }
+
+/* ==========================================================================
+   EL UMBRAL — escena fija mientras se hace scroll (≈3 pantallas).
+   JS escribe --p (0 → 1) y data-step (1, 2, 3). Todo lo demás es CSS.
+   ========================================================================== */
+.umbral { position: relative; height: 330vh; --p: 0; background: #1e1c1a; }
+.umbral__sticky { position: sticky; top: 0; height: 100vh; height: 100svh; overflow: hidden; isolation: isolate; }
+
+/* Capa del fondo: la sala de REHAB (se revela al cruzar la puerta) */
+.umbral__room {
+  position: absolute; inset: 0; z-index: 0;
+  background:
+    radial-gradient(ellipse 65% 7% at 50% 16%, rgba(255, 196, 120, 0.55), rgba(255, 196, 120, 0) 100%),
+    radial-gradient(ellipse 90% 35% at 50% 14%, rgba(233, 170, 92, 0.2), rgba(233, 170, 92, 0) 70%),
+    linear-gradient(180deg, #151413 0%, #24211e 45%, #3a342e 100%);
+  background-size: cover; background-position: center;
+  transform: scale(calc(1.3 - var(--p) * 0.3));
+  will-change: transform;
+}
+.umbral__room::after {        /* velo para que el texto se lea sobre la foto real */
+  content: ""; position: absolute; inset: 0;
+  background: linear-gradient(to top, rgba(20, 18, 16, 0.85), rgba(20, 18, 16, 0.2) 55%, rgba(20, 18, 16, 0.35));
+}
+.umbral__led {
+  position: absolute; z-index: 1; left: 12%; right: 12%; top: 16%; height: 2px; border-radius: 2px;
+  background: #ffc478; box-shadow: 0 0 18px 3px var(--c-led-glow), 0 0 60px 10px rgba(233, 170, 92, 0.25);
+  transform-origin: center; transform: scaleX(clamp(0, calc((var(--p) - 0.62) * 4), 1));
+}
+
+/* Capa delantera: la pared de la clínica con la puerta abierta */
+.umbral__wall {
+  position: absolute; inset: 0; z-index: 2;
+  background:
+    radial-gradient(ellipse 60% 40% at 25% 10%, rgba(255, 246, 230, 0.9), rgba(255, 246, 230, 0) 70%),
+    linear-gradient(170deg, #efe5d8 0%, #dccbb6 55%, #cbb69f 100%);
+  background-size: cover; background-position: center;
+  transform-origin: var(--door-x, 50%) var(--door-y, 56%);
+  transform: scale(calc(1 + var(--p) * var(--p) * 7));
+  opacity: clamp(0, calc((0.7 - var(--p)) * 6), 1);
+  will-change: transform, opacity;
+}
+.umbral__door {
+  position: absolute; left: var(--door-x, 50%); top: var(--door-y, 56%);
+  width: min(30vw, 15rem); aspect-ratio: 1 / 2.05; transform: translate(-50%, -50%);
+  background:
+    radial-gradient(ellipse 80% 5% at 50% 10%, rgba(255, 196, 120, 0.8), rgba(255, 196, 120, 0) 100%),
+    linear-gradient(180deg, #161514, #2a2622 70%, #3a342e);
+  box-shadow: 0 0 0 0.55rem #e9dccb, 0 0 0 0.6rem rgba(74, 63, 54, 0.25), 0 30px 60px -20px rgba(40, 30, 20, 0.45);
+}
+.umbral__door::after {          /* suelo: la luz del LED se escapa por la puerta */
+  content: ""; position: absolute; left: -40%; right: -40%; bottom: -14%; height: 18%;
+  background: radial-gradient(ellipse 50% 60% at 50% 0%, rgba(233, 170, 92, 0.35), rgba(233, 170, 92, 0) 70%);
+}
+.umbral__wall.has-img { --door-y: 50%; }
+.umbral__wall.has-img .umbral__door { display: none; }
+
+/* Plantas en primer plano: se abren a los lados como si pasáramos entre ellas */
+.umbral__plant { position: absolute; z-index: 3; bottom: -6%; width: min(48vw, 26rem); pointer-events: none; opacity: clamp(0, calc((0.8 - var(--p)) * 4), 1); }
+.umbral__plant--l { left: -8%; transform: translateX(calc(var(--p) * -55vw)) scale(calc(1 + var(--p) * 1.6)) scaleX(-1); transform-origin: 0% 100%; }
+.umbral__plant--r { right: -8%; transform: translateX(calc(var(--p) * 55vw)) scale(calc(1 + var(--p) * 1.6)); transform-origin: 100% 100%; }
+.umbral__plant > * { width: 100%; height: auto; display: block; }
+
+/* Texto de la escena */
+.umbral__copy {
+  position: absolute; z-index: 4; inset: auto 0 0 0; padding: 0 var(--gutter) clamp(3rem, 10vh, 6rem);
+  display: grid; justify-items: center; text-align: center; gap: 1.5rem;
+}
+.umbral__steps { position: relative; display: grid; width: 100%; max-width: 40rem; }
+.umbral__steps > p {
+  grid-area: 1 / 1; margin: 0; line-height: 1.1; font-size: clamp(2rem, 8vw, 3.6rem); font-weight: 300;
+  opacity: 0; transform: translateY(14px); transition: opacity 0.7s var(--ease), transform 0.7s var(--ease);
+}
+.umbral__steps > p:nth-child(-n + 2) { font-family: "Cormorant Garamond", Georgia, serif; color: #3a312a; }
+/* El paso 2 ocurre dentro de la puerta: texto claro con halo oscuro */
+.umbral__steps > p:nth-child(2) { color: #f5efe7; text-shadow: 0 0 28px rgba(20, 18, 16, 0.85), 0 0 6px rgba(20, 18, 16, 0.6); max-width: 13ch; justify-self: center; }
+.umbral__steps > p:nth-child(2) em { font-style: italic; }
+.umbral__steps > p:nth-child(3) { font-family: "Jost", sans-serif; color: #eee7dd; letter-spacing: -0.02em; }
+.umbral[data-step="1"] .umbral__steps > p:nth-child(1),
+.umbral[data-step="2"] .umbral__steps > p:nth-child(2),
+.umbral[data-step="3"] .umbral__steps > p:nth-child(3) { opacity: 1; transform: none; }
+.umbral__hint { font-size: 0.66rem; letter-spacing: 0.3em; text-transform: uppercase; color: #685a4d; transition: color 0.6s; }
+.umbral:not([data-step="1"]) .umbral__hint { color: #b4a898; }
+
+/* Logotipo REHAB: la barra de la A desaparece → Λ */
+.rehab-mark { display: grid; justify-items: center; gap: 0.6rem; color: #eee7dd; opacity: clamp(0, calc((var(--p) - 0.66) * 6), 1); }
+.rehab-mark svg { width: min(72vw, 22rem); height: auto; overflow: visible; }
+.rehab-mark path { fill: none; stroke: currentColor; stroke-width: 1.6; stroke-linecap: square; stroke-linejoin: miter; }
+.rehab-mark .a-bar { transform-box: fill-box; transform-origin: center; transform: scaleX(clamp(0, calc((0.9 - var(--p)) * 8), 1)); }
+.rehab-mark small { font-size: 0.62rem; letter-spacing: 0.5em; margin-right: -0.5em; color: #b4a898; }
+
+/* Barra de progreso del cruce */
+.umbral__progress { position: absolute; z-index: 4; left: 0; top: 0; height: 2px; width: 100%; background: var(--c-led); transform-origin: left; transform: scaleX(var(--p)); box-shadow: 0 0 10px var(--c-led-glow); opacity: 0.8; }
+
+/* Movimiento reducido o dispositivo modesto: la escena no se fija y se ve su estado final */
+.motion-lite .umbral { height: auto; --p: 1; }
+.motion-lite .umbral__sticky { position: relative; height: auto; min-height: 100svh; padding-block: 6rem; display: grid; align-items: end; }
+.motion-lite .umbral__wall, .motion-lite .umbral__plant, .motion-lite .umbral__progress { display: none; }
+.motion-lite .umbral__copy { position: relative; }
+.motion-lite .umbral__steps { gap: 0.9rem; }
+.motion-lite .umbral__steps > p { grid-area: auto; opacity: 1; transform: none; font-size: clamp(1.7rem, 6vw, 2.6rem); }
+.motion-lite .umbral__steps > p:nth-child(-n + 2) { color: #b4a898; }
+.motion-lite .umbral__hint { display: none; }
+
+/* ---------- REHAB ---------- */
+.logo-rehab { display: inline-grid; justify-items: start; gap: 0.5rem; line-height: 1; }
+.logo-rehab__word { font-family: "Jost", sans-serif; font-weight: 300; font-size: clamp(2.2rem, 10vw, 3.4rem); letter-spacing: 0.55em; margin-right: -0.55em; }
+.logo-rehab__by { font-size: 0.62rem; letter-spacing: 0.5em; color: var(--c-muted); }
+.lema { font-size: clamp(1.9rem, 7vw, 3.4rem); font-weight: 300; letter-spacing: -0.02em; line-height: 1.1; max-width: 16ch; }
+.lema em { font-style: normal; color: var(--c-accent-strong); }
+.led-rule { width: 3.5rem; height: 2px; border-radius: 2px; background: var(--c-led); box-shadow: 0 0 14px 1px var(--c-led-glow); }
+.rehab-intro { display: grid; gap: 1.6rem; margin-bottom: clamp(3rem, 9vw, 5rem); }
+@media (min-width: 900px) { .rehab-intro { grid-template-columns: 1fr 1fr; align-items: end; gap: 4rem; } }
+.rehab-intro .ph { --ratio: 16 / 10; --ph-bg: radial-gradient(ellipse 80% 25% at 50% 0%, rgba(233, 170, 92, 0.3), rgba(233, 170, 92, 0) 70%), linear-gradient(180deg, #2c2926, #45403a); }
+
+.theme-dark .card { background: linear-gradient(180deg, var(--c-surface) 0%, var(--c-bg) 140%); }
+.theme-dark .card:hover { border-color: rgba(233, 170, 92, 0.35); box-shadow: 0 0 0 1px rgba(233, 170, 92, 0.12), 0 24px 50px -30px rgba(233, 170, 92, 0.35); }
+.theme-dark .card--feature, .theme-dark .card--feature:hover { background: var(--c-dark); border-color: var(--c-dark); }
+
+/* Cómo trabajamos */
+.method { display: grid; gap: 3rem; }
+@media (min-width: 1000px) { .method { grid-template-columns: 5fr 7fr; gap: 4.5rem; align-items: start; } }
+.steps { display: grid; }
+.step { display: grid; grid-template-columns: 3.5rem 1fr; gap: 0.25rem 1rem; padding-block: 1.6rem; border-top: 1px solid var(--c-line); }
+.step:last-child { border-bottom: 1px solid var(--c-line); }
+.step__n { grid-row: span 2; font-size: 0.8rem; letter-spacing: 0.2em; color: var(--c-led); padding-top: 0.45rem; font-variant-numeric: tabular-nums; }
+.step h3 { font-weight: 400; font-size: 1.35rem; letter-spacing: -0.01em; }
+.step p { color: var(--c-muted); font-size: 0.98rem; }
+
+.chart-card {
+  position: relative; padding: 1.6rem 1.25rem 1.25rem; border: 1px solid var(--c-line); border-radius: var(--radius-lg);
+  background: radial-gradient(ellipse 80% 40% at 50% 0%, rgba(233, 170, 92, 0.07), rgba(233, 170, 92, 0) 70%), var(--c-surface);
+}
+@media (min-width: 720px) { .chart-card { padding: 2.2rem 2.2rem 1.6rem; } }
+.chart-card__head { display: flex; flex-wrap: wrap; justify-content: space-between; gap: 0.75rem 1.5rem; margin-bottom: 1.25rem; }
+.chart-card__head > div:first-child { flex: 1 1 18rem; max-width: 30rem; }
+.chart-card__title { font-size: 1.05rem; font-weight: 400; }
+.chart-card__sub { font-size: 0.85rem; color: var(--c-muted); }
+.chart-kpi { text-align: right; }
+.chart-kpi__value { font-size: 2.4rem; font-weight: 300; line-height: 1; font-variant-numeric: tabular-nums; }
+.chart-kpi__label { font-size: 0.72rem; letter-spacing: 0.16em; text-transform: uppercase; color: var(--c-muted); }
+.tag-example { display: inline-block; margin-bottom: 1rem; padding: 0.25rem 0.6rem; border: 1px solid var(--c-line); border-radius: 999px; font-size: 0.66rem; letter-spacing: 0.16em; text-transform: uppercase; color: var(--c-muted); }
+.chart { position: relative; }
+.chart svg { width: 100%; height: auto; overflow: visible; }
+.chart .grid line { stroke: var(--c-line); stroke-width: 1; }
+.chart .axis text, .chart .target text { fill: var(--c-muted); font-size: 11px; font-family: var(--font-body); }
+.chart .target line { stroke: var(--c-muted); stroke-width: 1; stroke-dasharray: 3 4; }
+.chart .area { fill: url(#area-fill); }
+.chart .line { fill: none; stroke: var(--c-led); stroke-width: 2; stroke-linejoin: round; stroke-linecap: round; }
+.chart .dot { fill: var(--c-led); stroke: var(--c-surface); stroke-width: 2; }
+.chart .dot--first { fill: var(--c-surface); stroke: var(--c-led); }
+.chart .label { fill: var(--c-text); font-size: 12px; font-family: var(--font-body); }
+.chart .hit { fill: transparent; cursor: pointer; outline: none; }
+.chart .hit:focus-visible + .ring, .chart .hit:hover + .ring { opacity: 1; }
+.chart .ring { fill: none; stroke: var(--c-text); stroke-width: 1; opacity: 0; transition: opacity 0.2s; pointer-events: none; }
+.chart .crosshair { stroke: var(--c-line); stroke-width: 1; opacity: 0; transition: opacity 0.2s; }
+.chart-tooltip { position: absolute; z-index: 2; pointer-events: none; transform: translate(-50%, calc(-100% - 14px)); padding: 0.55rem 0.8rem; min-width: 8.5rem; border-radius: var(--radius-lg); background: #0f0e0d; border: 1px solid var(--c-line); font-size: 0.8rem; line-height: 1.45; opacity: 0; transition: opacity 0.2s var(--ease); }
+.chart-tooltip.is-on { opacity: 1; }
+.chart-tooltip strong { display: block; font-size: 1.05rem; font-weight: 500; font-variant-numeric: tabular-nums; }
+.chart-tooltip span { color: var(--c-muted); }
+@media (prefers-reduced-motion: no-preference) {
+  .js .chart .line { stroke-dasharray: var(--len); stroke-dashoffset: var(--len); transition: stroke-dashoffset 2s var(--ease) 0.2s; }
+  .js .chart .area, .js .chart .dot, .js .chart .label { opacity: 0; transition: opacity 0.8s var(--ease) 1.6s; }
+  .js .chart.is-drawn .line { stroke-dashoffset: 0; }
+  .js .chart.is-drawn .area, .js .chart.is-drawn .dot, .js .chart.is-drawn .label { opacity: 1; }
+}
+.chart-foot { display: flex; flex-wrap: wrap; justify-content: space-between; gap: 0.75rem; margin-top: 1rem; font-size: 0.8rem; color: var(--c-muted); }
+.chart-data summary { cursor: pointer; text-decoration: underline; text-underline-offset: 3px; }
+.chart-data table { margin-top: 0.75rem; border-collapse: collapse; width: 100%; font-variant-numeric: tabular-nums; }
+.chart-data th, .chart-data td { text-align: left; padding: 0.35rem 0.75rem 0.35rem 0; border-bottom: 1px solid var(--c-line); font-weight: 400; }
+.chart-data th { color: var(--c-muted); }
+
+/* ---------- Equipo (4 personas, con su centro) ---------- */
+@media (min-width: 720px) { .team { grid-template-columns: repeat(2, 1fr); } }
+@media (min-width: 1080px) { .team { grid-template-columns: repeat(4, 1fr); } }
+.member .ph { --ph-bg: radial-gradient(ellipse 80% 25% at 50% 0%, rgba(233, 170, 92, 0.25), rgba(233, 170, 92, 0) 70%), linear-gradient(180deg, #2c2926, #45403a); }
+.member__center { display: inline-block; margin-bottom: 0.7rem; padding: 0.2rem 0.6rem; border: 1px solid var(--c-line); border-radius: 999px; font-size: 0.62rem; letter-spacing: 0.2em; text-transform: uppercase; color: var(--c-muted); }
+
+/* ---------- Dos centros: ubicación ---------- */
+.centers { display: grid; gap: 1.25rem; }
+@media (min-width: 900px) { .centers { grid-template-columns: 1fr 1fr; } }
+.center-card { display: grid; gap: 1.5rem; padding: 1.25rem 1.25rem 1.75rem; border-radius: var(--radius-lg); border: 1px solid var(--c-line); background: var(--c-bg); color: var(--c-text); }
+@media (min-width: 720px) { .center-card { padding: 1.5rem 1.75rem 2rem; } }
+.center-card .map { min-height: 15rem; }
+.center-card .map iframe { filter: grayscale(0.85) sepia(0.18) contrast(0.95); }
+.center-card__name { font-family: var(--font-display); font-weight: var(--display-weight); font-size: 1.9rem; line-height: 1.1; }
+.center-card .info-block + .info-block { margin-top: 1.5rem; padding-top: 1.5rem; }
+.map .ph { position: absolute; inset: 0; height: 100%; --ratio: auto; place-items: center; }
+.theme-dark .map .ph { --ph-bg: repeating-linear-gradient(90deg, rgba(238, 231, 221, 0.04) 0 1px, transparent 1px 48px), repeating-linear-gradient(0deg, rgba(238, 231, 221, 0.04) 0 1px, transparent 1px 48px), var(--c-surface-2); }
+
+/* ---------- Pie ---------- */
+.site-footer { background: #141311; color: #eee7dd; }
+.site-footer h2, .site-footer p, .site-footer li, .footer-legal { color: #b4a898; }
+.site-footer a { color: #eee7dd; }
+.site-footer :focus-visible { outline-color: #e2cfb3; }

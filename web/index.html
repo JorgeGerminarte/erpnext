@@ -1,0 +1,670 @@
+<!doctype html>
+<html lang="es">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+  <title>Ángel Juan · Clínica y REHAB en Alzira</title>
+  <meta name="description" content="Del dolor al rendimiento. Clínica Ángel Juan (fisioterapia avanzada y osteopatía, en Alzira desde 2006) y REHAB by Ángel Juan (readaptación, rehabilitación y rendimiento).">
+  <meta name="theme-color" content="#f5efe7">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,300;0,400;0,500;1,300;1,400&family=Jost:wght@300;400;500&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="../shared/base.css">
+  <link rel="stylesheet" href="css/site.css">
+</head>
+<body class="theme-light">
+  <a class="skip-link" href="#main">Saltar al contenido</a>
+
+  <!-- Iconos reutilizables -->
+  <svg width="0" height="0" style="position:absolute" aria-hidden="true" focusable="false">
+    <symbol id="i-star" viewBox="0 0 20 20"><path fill="currentColor" d="M10 1.5l2.6 5.4 5.9.8-4.3 4.1 1 5.8L10 14.8l-5.2 2.8 1-5.8L1.5 7.7l5.9-.8z"/></symbol>
+    <symbol id="i-whatsapp" viewBox="0 0 32 32"><path fill="currentColor" d="M16 3C9 3 3.3 8.6 3.3 15.6c0 2.4.7 4.7 1.9 6.7L3 29l6.9-2.1c1.9 1 4 1.6 6.1 1.6 7 0 12.7-5.6 12.7-12.6S23 3 16 3zm0 23.1c-1.9 0-3.8-.5-5.4-1.5l-.4-.2-4.1 1.2 1.3-4-.3-.4c-1.1-1.7-1.7-3.6-1.7-5.6C5.4 9.8 10.1 5.2 16 5.2s10.6 4.6 10.6 10.4S21.9 26.1 16 26.1zm5.8-7.8c-.3-.2-1.9-.9-2.2-1s-.5-.2-.7.2-.8 1-1 1.2-.4.2-.7.1c-.3-.2-1.3-.5-2.5-1.5-.9-.8-1.6-1.8-1.7-2.1-.2-.3 0-.5.1-.6l.5-.6c.2-.2.2-.3.3-.5.1-.2.1-.4 0-.6l-1-2.4c-.3-.6-.5-.5-.7-.5h-.6c-.2 0-.6.1-.9.4-.3.3-1.2 1.1-1.2 2.7s1.2 3.2 1.4 3.4c.2.2 2.4 3.6 5.8 5 .8.3 1.4.5 1.9.7.8.3 1.5.2 2.1.1.6-.1 1.9-.8 2.2-1.5.3-.7.3-1.4.2-1.5-.1-.2-.3-.3-.6-.4z"/></symbol>
+    <symbol id="i-arrow" viewBox="0 0 24 24"><path fill="none" stroke="currentColor" stroke-width="1.4" d="M4 12h15m-5-5 5 5-5 5"/></symbol>
+  </svg>
+
+  <!-- ============ Cabecera (cambia de tema al cruzar a REHAB) ============ -->
+  <header class="site-header theme-light">
+    <div class="container">
+      <a class="brand-duo" href="#inicio" aria-label="Ángel Juan, inicio">
+        <span class="brand-duo__name">Ángel Juan</span>
+        <span class="brand-duo__subs" aria-hidden="true">Clínica <i></i> REHΛB</span>
+      </a>
+      <nav aria-label="Principal">
+        <ul class="nav-list" role="list">
+          <li><a href="#clinica">Clínica</a></li>
+          <li><a href="#rehab">REHAB</a></li>
+          <li><a href="#equipo">Equipo</a></li>
+          <li><a href="#opiniones">Opiniones</a></li>
+          <li><a href="#contacto">Centros</a></li>
+        </ul>
+      </nav>
+      <!-- [TELÉFONO]: el número se configura en js/site.js (WA_PHONE) y en estos enlaces de respaldo -->
+      <a class="btn header-cta" data-wa-dynamic href="https://wa.me/[TELÉFONO]?text=Hola%2C%20quiero%20pedir%20cita%20en%20la%20cl%C3%ADnica"><span data-wa-label>Pedir cita</span></a>
+      <button class="menu-toggle" type="button" aria-expanded="false" aria-controls="mobile-menu" aria-label="Abrir menú">
+        <span class="bars" aria-hidden="true"></span>
+      </button>
+    </div>
+  </header>
+
+  <div class="mobile-menu" id="mobile-menu">
+    <nav aria-label="Menú móvil">
+      <ul role="list">
+        <li><a href="#clinica">Clínica</a></li>
+        <li><a href="#rehab">REHAB</a></li>
+        <li><a href="#equipo">Equipo</a></li>
+        <li><a href="#opiniones">Opiniones</a></li>
+        <li><a href="#contacto">Centros y horarios</a></li>
+      </ul>
+    </nav>
+    <div style="display:grid; gap:.75rem">
+      <a class="btn" href="https://wa.me/[TELÉFONO]?text=Hola%2C%20quiero%20pedir%20cita%20en%20la%20cl%C3%ADnica"><svg aria-hidden="true"><use href="#i-whatsapp"/></svg> Cita en la clínica</a>
+      <a class="btn btn--ghost" href="https://wa.me/[TELÉFONO]?text=Hola%2C%20quiero%20reservar%20mi%20valoraci%C3%B3n%20inicial%20en%20Rehab"><svg aria-hidden="true"><use href="#i-whatsapp"/></svg> Valoración en REHAB</a>
+    </div>
+  </div>
+
+  <main id="main">
+    <!-- ============ 1. Hero con parallax ============ -->
+    <section class="hero theme-light" id="inicio" data-theme-section="light" data-brand="clinica" aria-labelledby="hero-title">
+      <div class="hero__layer hero__bg" data-speed="0.35">
+        <div class="ph" data-img="img/hero-clinica.jpg" role="img" aria-label="Sala de tratamiento de la clínica con luz cálida natural">
+          <span class="ph__label">img/hero-clinica.jpg</span>
+        </div>
+      </div>
+      <div class="hero__scrim" aria-hidden="true"></div>
+
+      <div class="hero__content" data-speed="0.12" data-fade>
+        <div class="container">
+          <p class="eyebrow">Alzira · desde 2006</p>
+          <h1 class="display" id="hero-title">Del dolor <em>al rendimiento</em></h1>
+          <p class="lead">Dos centros y un mismo equipo. En la Clínica Ángel Juan tratamos tu dolor; en REHAB recuperas la fuerza y vuelves a rendir.</p>
+          <div class="doors">
+            <a class="door door--clinica" href="#clinica">
+              <small>Clínica Ángel Juan</small>
+              <strong><span>Fisioterapia y osteopatía</span><span aria-hidden="true">→</span></strong>
+            </a>
+            <a class="door door--rehab" href="#rehab">
+              <small>REHAB by Ángel Juan</small>
+              <strong><span>Readaptación y rendimiento</span><span aria-hidden="true">→</span></strong>
+            </a>
+          </div>
+        </div>
+      </div>
+
+      <div class="hero__layer hero__front" data-speed="-0.28" aria-hidden="true">
+        <span class="plant-slot plant-hang sway sway--slow" data-src="img/planta-colgante.png"><svg focusable="false" viewBox="0 0 520 460"><defs><path id="leaf-a" d="M0 0C9-7 30-11 52-4C60-1 64 0 66 0C64 0 60 1 52 4C30 11 9 7 0 0Z"/></defs><path d="M520 -10C420 40 300 120 170 330" fill="none" stroke="#5b6650" stroke-width="1.6" stroke-linecap="round"/>
+<use href="#leaf-a" transform="translate(504.9 -2.3) rotate(105.3) scale(0.91)" fill="#88957a"/>
+<use href="#leaf-a" transform="translate(487.6 7.0) rotate(197.1) scale(0.95)" fill="#88957a"/>
+<use href="#leaf-a" transform="translate(469.9 17.0) rotate(98.9) scale(0.98)" fill="#6f7c62"/>
+<use href="#leaf-a" transform="translate(452.0 27.9) rotate(205.6) scale(1.16)" fill="#6f7c62"/>
+<use href="#leaf-a" transform="translate(433.7 39.8) rotate(101.4) scale(1.14)" fill="#6f7c62"/>
+<use href="#leaf-a" transform="translate(415.0 52.8) rotate(193.6) scale(1.32)" fill="#65725a"/>
+<use href="#leaf-a" transform="translate(396.1 66.9) rotate(92.1) scale(1.23)" fill="#7d8a6f"/>
+<use href="#leaf-a" transform="translate(376.8 82.3) rotate(190.6) scale(1.25)" fill="#65725a"/>
+<use href="#leaf-a" transform="translate(357.3 99.1) rotate(81.2) scale(1.36)" fill="#88957a"/>
+<use href="#leaf-a" transform="translate(337.5 117.4) rotate(176.8) scale(1.39)" fill="#88957a"/>
+<use href="#leaf-a" transform="translate(317.4 137.3) rotate(86.7) scale(1.19)" fill="#7d8a6f"/>
+<use href="#leaf-a" transform="translate(297.0 158.8) rotate(172.4) scale(1.12)" fill="#65725a"/>
+<use href="#leaf-a" transform="translate(276.4 182.2) rotate(82.8) scale(1.09)" fill="#6f7c62"/>
+<use href="#leaf-a" transform="translate(255.6 207.5) rotate(170.7) scale(1.03)" fill="#65725a"/>
+<use href="#leaf-a" transform="translate(234.5 234.9) rotate(85.8) scale(0.83)" fill="#6f7c62"/>
+<use href="#leaf-a" transform="translate(213.2 264.3) rotate(178.2) scale(0.71)" fill="#6f7c62"/>
+<use href="#leaf-a" transform="translate(191.7 296.0) rotate(71.4) scale(0.71)" fill="#65725a"/>
+<use href="#leaf-a" transform="translate(170.0 330.0) rotate(177.9) scale(0.72)" fill="#7d8a6f"/>
+<use href="#leaf-a" transform="translate(170 330) rotate(121.8) scale(1.08)" fill="#6f7c62"/>
+<path d="M520 20C470 120 430 260 380 440" fill="none" stroke="#5b6650" stroke-width="1.6" stroke-linecap="round"/>
+<use href="#leaf-a" transform="translate(512.6 35.3) rotate(66.6) scale(0.80)" fill="#4d5943"/>
+<use href="#leaf-a" transform="translate(502.7 57.0) rotate(164.4) scale(0.90)" fill="#5f6b53"/>
+<use href="#leaf-a" transform="translate(493.0 79.9) rotate(58.1) scale(1.06)" fill="#5f6b53"/>
+<use href="#leaf-a" transform="translate(483.6 103.8) rotate(153.0) scale(1.09)" fill="#56624b"/>
+<use href="#leaf-a" transform="translate(474.2 128.8) rotate(52.2) scale(1.22)" fill="#687560"/>
+<use href="#leaf-a" transform="translate(465.0 155.0) rotate(152.2) scale(1.24)" fill="#4d5943"/>
+<use href="#leaf-a" transform="translate(455.8 182.2) rotate(61.3) scale(1.30)" fill="#4d5943"/>
+<use href="#leaf-a" transform="translate(446.6 210.6) rotate(164.7) scale(1.14)" fill="#5f6b53"/>
+<use href="#leaf-a" transform="translate(437.4 240.0) rotate(67.0) scale(1.11)" fill="#4d5943"/>
+<use href="#leaf-a" transform="translate(428.2 270.6) rotate(148.7) scale(1.06)" fill="#56624b"/>
+<use href="#leaf-a" transform="translate(418.9 302.3) rotate(58.6) scale(0.95)" fill="#56624b"/>
+<use href="#leaf-a" transform="translate(409.5 335.0) rotate(160.6) scale(0.74)" fill="#687560"/>
+<use href="#leaf-a" transform="translate(399.9 368.9) rotate(52.1) scale(0.70)" fill="#687560"/>
+<use href="#leaf-a" transform="translate(390.0 403.9) rotate(161.4) scale(0.65)" fill="#4d5943"/>
+<use href="#leaf-a" transform="translate(380.0 440.0) rotate(65.8) scale(0.72)" fill="#687560"/>
+<use href="#leaf-a" transform="translate(380 440) rotate(105.5) scale(0.96)" fill="#56624b"/>
+<path d="M520 0C380 20 240 40 80 120" fill="none" stroke="#5b6650" stroke-width="1.6" stroke-linecap="round"/>
+<use href="#leaf-a" transform="translate(478.0 6.1) rotate(124.4) scale(0.82)" fill="#6f7c62"/>
+<use href="#leaf-a" transform="translate(448.8 10.4) rotate(223.7) scale(0.83)" fill="#7d8a6f"/>
+<use href="#leaf-a" transform="translate(419.6 15.1) rotate(132.0) scale(1.00)" fill="#88957a"/>
+<use href="#leaf-a" transform="translate(390.2 20.2) rotate(223.9) scale(0.97)" fill="#88957a"/>
+<use href="#leaf-a" transform="translate(360.6 25.8) rotate(117.6) scale(1.06)" fill="#7d8a6f"/>
+<use href="#leaf-a" transform="translate(330.8 32.1) rotate(205.9) scale(1.17)" fill="#6f7c62"/>
+<use href="#leaf-a" transform="translate(300.8 39.1) rotate(117.6) scale(1.17)" fill="#88957a"/>
+<use href="#leaf-a" transform="translate(270.5 47.1) rotate(222.3) scale(0.97)" fill="#7d8a6f"/>
+<use href="#leaf-a" transform="translate(239.8 56.0) rotate(124.4) scale(0.90)" fill="#7d8a6f"/>
+<use href="#leaf-a" transform="translate(208.7 66.1) rotate(214.4) scale(0.83)" fill="#88957a"/>
+<use href="#leaf-a" transform="translate(177.3 77.4) rotate(104.6) scale(0.68)" fill="#65725a"/>
+<use href="#leaf-a" transform="translate(145.4 90.1) rotate(213.3) scale(0.64)" fill="#88957a"/>
+<use href="#leaf-a" transform="translate(112.9 104.2) rotate(100.9) scale(0.65)" fill="#7d8a6f"/>
+<use href="#leaf-a" transform="translate(80.0 120.0) rotate(202.1) scale(0.61)" fill="#6f7c62"/>
+<use href="#leaf-a" transform="translate(80 120) rotate(153.4) scale(0.88)" fill="#6f7c62"/></svg></span>
+        <span class="plant-slot plant-rise sway" data-src="img/planta-derecha.png"><svg focusable="false" viewBox="0 0 400 560"><defs><path id="leaf-b" d="M0 0C9-7 30-11 52-4C60-1 64 0 66 0C64 0 60 1 52 4C30 11 9 7 0 0Z"/></defs><path d="M230 560C230 420 170 300 120 120" fill="none" stroke="#5b6650" stroke-width="1.6" stroke-linecap="round"/>
+<use href="#leaf-b" transform="translate(227.5 510.3) rotate(-140.1) scale(0.86)" fill="#56624b"/>
+<use href="#leaf-b" transform="translate(224.7 486.4) rotate(-58.6) scale(1.03)" fill="#4d5943"/>
+<use href="#leaf-b" transform="translate(220.8 462.6) rotate(-150.0) scale(1.20)" fill="#5f6b53"/>
+<use href="#leaf-b" transform="translate(216.0 438.9) rotate(-63.5) scale(1.17)" fill="#56624b"/>
+<use href="#leaf-b" transform="translate(210.5 415.0) rotate(-146.8) scale(1.24)" fill="#56624b"/>
+<use href="#leaf-b" transform="translate(204.2 391.0) rotate(-50.8) scale(1.15)" fill="#5f6b53"/>
+<use href="#leaf-b" transform="translate(197.3 366.7) rotate(-157.1) scale(1.27)" fill="#56624b"/>
+<use href="#leaf-b" transform="translate(189.8 342.1) rotate(-57.7) scale(1.19)" fill="#5f6b53"/>
+<use href="#leaf-b" transform="translate(181.8 316.9) rotate(-146.8) scale(1.25)" fill="#4d5943"/>
+<use href="#leaf-b" transform="translate(173.5 291.3) rotate(-61.8) scale(1.10)" fill="#4d5943"/>
+<use href="#leaf-b" transform="translate(164.8 264.9) rotate(-157.4) scale(1.04)" fill="#56624b"/>
+<use href="#leaf-b" transform="translate(155.9 237.8) rotate(-58.4) scale(0.92)" fill="#4d5943"/>
+<use href="#leaf-b" transform="translate(146.9 209.9) rotate(-147.6) scale(0.81)" fill="#56624b"/>
+<use href="#leaf-b" transform="translate(137.9 181.0) rotate(-56.7) scale(0.69)" fill="#687560"/>
+<use href="#leaf-b" transform="translate(128.9 151.1) rotate(-159.9) scale(0.68)" fill="#687560"/>
+<use href="#leaf-b" transform="translate(120.0 120.0) rotate(-60.3) scale(0.65)" fill="#5f6b53"/>
+<use href="#leaf-b" transform="translate(120 120) rotate(-105.5) scale(1.00)" fill="#56624b"/>
+<path d="M240 560C250 430 320 330 360 170" fill="none" stroke="#5b6650" stroke-width="1.6" stroke-linecap="round"/>
+<use href="#leaf-b" transform="translate(246.0 514.3) rotate(-131.4) scale(0.77)" fill="#65725a"/>
+<use href="#leaf-b" transform="translate(251.4 489.4) rotate(-28.0) scale(0.98)" fill="#88957a"/>
+<use href="#leaf-b" transform="translate(257.9 464.8) rotate(-117.7) scale(1.10)" fill="#6f7c62"/>
+<use href="#leaf-b" transform="translate(265.4 440.4) rotate(-23.6) scale(0.99)" fill="#65725a"/>
+<use href="#leaf-b" transform="translate(273.8 416.0) rotate(-111.3) scale(1.09)" fill="#6f7c62"/>
+<use href="#leaf-b" transform="translate(282.9 391.4) rotate(-12.0) scale(1.01)" fill="#65725a"/>
+<use href="#leaf-b" transform="translate(292.5 366.6) rotate(-113.4) scale(1.04)" fill="#88957a"/>
+<use href="#leaf-b" transform="translate(302.4 341.3) rotate(-19.0) scale(1.01)" fill="#6f7c62"/>
+<use href="#leaf-b" transform="translate(312.6 315.3) rotate(-125.8) scale(0.94)" fill="#6f7c62"/>
+<use href="#leaf-b" transform="translate(322.7 288.6) rotate(-30.5) scale(0.88)" fill="#88957a"/>
+<use href="#leaf-b" transform="translate(332.7 260.8) rotate(-114.5) scale(0.72)" fill="#65725a"/>
+<use href="#leaf-b" transform="translate(342.3 231.9) rotate(-33.8) scale(0.61)" fill="#7d8a6f"/>
+<use href="#leaf-b" transform="translate(351.5 201.7) rotate(-124.2) scale(0.60)" fill="#7d8a6f"/>
+<use href="#leaf-b" transform="translate(360.0 170.0) rotate(-22.6) scale(0.56)" fill="#7d8a6f"/>
+<use href="#leaf-b" transform="translate(360 170) rotate(-76.0) scale(0.88)" fill="#6f7c62"/>
+<path d="M236 560C236 470 215 380 240 250" fill="none" stroke="#5b6650" stroke-width="1.6" stroke-linecap="round"/>
+<use href="#leaf-b" transform="translate(235.2 527.5) rotate(-145.5) scale(0.76)" fill="#687560"/>
+<use href="#leaf-b" transform="translate(233.7 500.8) rotate(-47.1) scale(0.82)" fill="#4d5943"/>
+<use href="#leaf-b" transform="translate(231.8 473.5) rotate(-156.7) scale(0.97)" fill="#4d5943"/>
+<use href="#leaf-b" transform="translate(230.0 445.6) rotate(-34.4) scale(1.04)" fill="#687560"/>
+<use href="#leaf-b" transform="translate(228.5 416.7) rotate(-156.4) scale(0.87)" fill="#5f6b53"/>
+<use href="#leaf-b" transform="translate(227.8 386.6) rotate(-42.4) scale(0.90)" fill="#56624b"/>
+<use href="#leaf-b" transform="translate(228.2 355.1) rotate(-142.7) scale(0.77)" fill="#4d5943"/>
+<use href="#leaf-b" transform="translate(230.1 322.0) rotate(-34.6) scale(0.58)" fill="#4d5943"/>
+<use href="#leaf-b" transform="translate(233.9 287.0) rotate(-139.5) scale(0.50)" fill="#5f6b53"/>
+<use href="#leaf-b" transform="translate(240.0 250.0) rotate(-20.3) scale(0.52)" fill="#56624b"/>
+<use href="#leaf-b" transform="translate(240 250) rotate(-79.1) scale(0.76)" fill="#56624b"/></svg></span>
+      </div>
+
+      <a class="hero__scroll" href="#clinica"><span>Empieza el recorrido</span><i aria-hidden="true"></i></a>
+    </section>
+
+    <!-- ============ 2. Etapa 1 · Clínica ============ -->
+    <section class="section theme-light" id="clinica" data-theme-section="light" data-brand="clinica" aria-labelledby="clinica-title">
+      <div class="container">
+        <div class="services-intro">
+          <div class="section-head" style="margin:0">
+            <p class="stage reveal"><b>Etapa 1</b> · Clínica Ángel Juan</p>
+            <h2 class="h2 reveal" id="clinica-title" style="--d:.08s">Tratamos el origen <em>de tu dolor</em></h2>
+          </div>
+          <p class="lead reveal" style="--d:.16s">Valoramos tu caso de forma individual y combinamos técnicas manuales, ejercicio terapéutico y tecnología diagnóstica para tratar el origen del problema, no solo el síntoma.</p>
+        </div>
+
+        <ul class="cards" role="list">
+          <li class="card reveal">
+            <div class="card__top">
+              <svg class="card__icon" viewBox="0 0 48 48" fill="none" stroke="currentColor" stroke-width="1.2" aria-hidden="true"><path d="M24 6v36"/><path d="M17 11h14M15 18h18M16 25h16M17 32h14M19 39h10"/></svg>
+            </div>
+            <h3 class="h3">Fisioterapia avanzada</h3>
+            <p>Terapia manual y técnicas actuales para lesiones musculares, articulares y tendinosas, adaptadas a tu momento.</p>
+          </li>
+          <li class="card reveal" style="--d:.08s">
+            <div class="card__top">
+              <svg class="card__icon" viewBox="0 0 48 48" fill="none" stroke="currentColor" stroke-width="1.2" aria-hidden="true"><path d="M14 30c0-7 3-17 6-17s2 8 2 8 1-12 4-12 3 12 3 12 1-9 4-9 3 8 2 16c-1 8-6 12-12 12s-9-4-9-10z"/></svg>
+            </div>
+            <h3 class="h3">Osteopatía</h3>
+            <p>Un enfoque global del cuerpo para mejorar la movilidad y el equilibrio entre estructuras, con un trato suave y preciso.</p>
+          </li>
+          <li class="card reveal" style="--d:.16s">
+            <div class="card__top">
+              <svg class="card__icon" viewBox="0 0 48 48" fill="none" stroke="currentColor" stroke-width="1.2" aria-hidden="true"><path d="M8 34a16 16 0 0 1 32 0"/><path d="M14 34a10 10 0 0 1 20 0"/><path d="M20 34a4 4 0 0 1 8 0"/><path d="M24 6v12"/></svg>
+            </div>
+            <h3 class="h3">Valoración ecográfica musculoesquelética</h3>
+            <p>Vemos en tiempo real músculos, tendones y ligamentos para afinar el diagnóstico y seguir tu evolución.</p>
+          </li>
+          <li class="card reveal">
+            <div class="card__top">
+              <svg class="card__icon" viewBox="0 0 48 48" fill="none" stroke="currentColor" stroke-width="1.2" aria-hidden="true"><circle cx="26" cy="9" r="3.5"/><path d="M25 14l-4 12 6 5v11M21 26l-6 6-4-1M24 18l8 5 6-2"/></svg>
+            </div>
+            <h3 class="h3">Rehabilitación funcional</h3>
+            <p>Ejercicio terapéutico guiado para recuperar fuerza, control y confianza en tus movimientos del día a día.</p>
+          </li>
+          <li class="card reveal" style="--d:.08s">
+            <div class="card__top">
+              <svg class="card__icon" viewBox="0 0 48 48" fill="none" stroke="currentColor" stroke-width="1.2" aria-hidden="true"><path d="M4 26h9l4-10 6 20 5-14 3 4h13"/></svg>
+            </div>
+            <h3 class="h3">Dolor agudo y crónico</h3>
+            <p>Abordamos el dolor reciente y el que se ha instalado en el tiempo con un plan claro, progresivo y realista.</p>
+          </li>
+          <li class="card card--feature reveal" style="--d:.16s">
+            <div class="card__top">
+              <svg class="card__icon" aria-hidden="true"><use href="#i-whatsapp"/></svg>
+            </div>
+            <h3 class="h3">¿No sabes qué necesitas?</h3>
+            <p>Cuéntanos qué te ocurre. Te orientamos y te proponemos la mejor forma de empezar.</p>
+            <a class="link-arrow" href="https://wa.me/[TELÉFONO]?text=Hola%2C%20quiero%20pedir%20cita%20en%20la%20cl%C3%ADnica" style="margin-top:auto; align-self:flex-start">Escríbenos <span aria-hidden="true">→</span></a>
+          </li>
+        </ul>
+
+        <div class="since">
+          <div class="since__media reveal">
+            <div class="ph ph--main" data-img="img/clinica-sala.jpg" role="img" aria-label="Recepción o sala de la clínica en Carrer Gandia, 23"><span class="ph__label">img/clinica-sala.jpg</span></div>
+            <div class="ph ph--detail" data-img="img/clinica-detalle.jpg" role="img" aria-label="Detalle de la sala de tratamiento"><span class="ph__label">img/clinica-detalle.jpg</span></div>
+          </div>
+          <div class="since__text">
+            <p class="year reveal" aria-hidden="true">2006</p>
+            <p class="eyebrow reveal">Nuestra historia</p>
+            <h2 class="h2 reveal" style="--d:.08s">Desde 2006 <em>en Alzira</em></h2>
+            <p class="reveal" style="--d:.12s">Llevamos cuidando de la salud de nuestros vecinos desde 2006. Hemos incorporado nuevas técnicas y tecnología, pero mantenemos lo esencial: conocerte, escucharte y acompañarte en todo el proceso.</p>
+            <ul class="pillars reveal" role="list" style="--d:.16s">
+              <li><strong>Atención personalizada</strong><span>Cada plan parte de una valoración individual de tu caso.</span></li>
+              <li><strong>Diagnóstico preciso</strong><span>La ecografía nos ayuda a ver lo que ocurre y a decidir mejor.</span></li>
+              <li><strong>Cercanía y confianza</strong><span>Un equipo que te conoce y un espacio pensado para que estés tranquilo.</span></li>
+            </ul>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- ============ 3. El umbral: de la clínica a REHAB ============ -->
+    <section class="umbral" id="umbral" data-theme-section="light" data-step="1" aria-labelledby="umbral-title">
+      <h2 class="visually-hidden" id="umbral-title">De la clínica a REHAB</h2>
+      <div class="umbral__sticky">
+        <div class="umbral__room" data-img="img/umbral-rehab.jpg" aria-hidden="true"></div>
+        <div class="umbral__led" aria-hidden="true"></div>
+        <div class="umbral__wall" data-img="img/umbral-puerta.jpg" aria-hidden="true"><div class="umbral__door"></div></div>
+        <div class="umbral__plant umbral__plant--l" data-src="img/planta-derecha.png" aria-hidden="true"><svg focusable="false" viewBox="0 0 400 560"><path d="M230 560C230 420 170 300 120 120" fill="none" stroke="#5b6650" stroke-width="1.6" stroke-linecap="round"/>
+<use href="#leaf-b" transform="translate(227.5 510.3) rotate(-140.1) scale(0.86)" fill="#56624b"/>
+<use href="#leaf-b" transform="translate(224.7 486.4) rotate(-58.6) scale(1.03)" fill="#4d5943"/>
+<use href="#leaf-b" transform="translate(220.8 462.6) rotate(-150.0) scale(1.20)" fill="#5f6b53"/>
+<use href="#leaf-b" transform="translate(216.0 438.9) rotate(-63.5) scale(1.17)" fill="#56624b"/>
+<use href="#leaf-b" transform="translate(210.5 415.0) rotate(-146.8) scale(1.24)" fill="#56624b"/>
+<use href="#leaf-b" transform="translate(204.2 391.0) rotate(-50.8) scale(1.15)" fill="#5f6b53"/>
+<use href="#leaf-b" transform="translate(197.3 366.7) rotate(-157.1) scale(1.27)" fill="#56624b"/>
+<use href="#leaf-b" transform="translate(189.8 342.1) rotate(-57.7) scale(1.19)" fill="#5f6b53"/>
+<use href="#leaf-b" transform="translate(181.8 316.9) rotate(-146.8) scale(1.25)" fill="#4d5943"/>
+<use href="#leaf-b" transform="translate(173.5 291.3) rotate(-61.8) scale(1.10)" fill="#4d5943"/>
+<use href="#leaf-b" transform="translate(164.8 264.9) rotate(-157.4) scale(1.04)" fill="#56624b"/>
+<use href="#leaf-b" transform="translate(155.9 237.8) rotate(-58.4) scale(0.92)" fill="#4d5943"/>
+<use href="#leaf-b" transform="translate(146.9 209.9) rotate(-147.6) scale(0.81)" fill="#56624b"/>
+<use href="#leaf-b" transform="translate(137.9 181.0) rotate(-56.7) scale(0.69)" fill="#687560"/>
+<use href="#leaf-b" transform="translate(128.9 151.1) rotate(-159.9) scale(0.68)" fill="#687560"/>
+<use href="#leaf-b" transform="translate(120.0 120.0) rotate(-60.3) scale(0.65)" fill="#5f6b53"/>
+<use href="#leaf-b" transform="translate(120 120) rotate(-105.5) scale(1.00)" fill="#56624b"/>
+<path d="M240 560C250 430 320 330 360 170" fill="none" stroke="#5b6650" stroke-width="1.6" stroke-linecap="round"/>
+<use href="#leaf-b" transform="translate(246.0 514.3) rotate(-131.4) scale(0.77)" fill="#65725a"/>
+<use href="#leaf-b" transform="translate(251.4 489.4) rotate(-28.0) scale(0.98)" fill="#88957a"/>
+<use href="#leaf-b" transform="translate(257.9 464.8) rotate(-117.7) scale(1.10)" fill="#6f7c62"/>
+<use href="#leaf-b" transform="translate(265.4 440.4) rotate(-23.6) scale(0.99)" fill="#65725a"/>
+<use href="#leaf-b" transform="translate(273.8 416.0) rotate(-111.3) scale(1.09)" fill="#6f7c62"/>
+<use href="#leaf-b" transform="translate(282.9 391.4) rotate(-12.0) scale(1.01)" fill="#65725a"/>
+<use href="#leaf-b" transform="translate(292.5 366.6) rotate(-113.4) scale(1.04)" fill="#88957a"/>
+<use href="#leaf-b" transform="translate(302.4 341.3) rotate(-19.0) scale(1.01)" fill="#6f7c62"/>
+<use href="#leaf-b" transform="translate(312.6 315.3) rotate(-125.8) scale(0.94)" fill="#6f7c62"/>
+<use href="#leaf-b" transform="translate(322.7 288.6) rotate(-30.5) scale(0.88)" fill="#88957a"/>
+<use href="#leaf-b" transform="translate(332.7 260.8) rotate(-114.5) scale(0.72)" fill="#65725a"/>
+<use href="#leaf-b" transform="translate(342.3 231.9) rotate(-33.8) scale(0.61)" fill="#7d8a6f"/>
+<use href="#leaf-b" transform="translate(351.5 201.7) rotate(-124.2) scale(0.60)" fill="#7d8a6f"/>
+<use href="#leaf-b" transform="translate(360.0 170.0) rotate(-22.6) scale(0.56)" fill="#7d8a6f"/>
+<use href="#leaf-b" transform="translate(360 170) rotate(-76.0) scale(0.88)" fill="#6f7c62"/>
+<path d="M236 560C236 470 215 380 240 250" fill="none" stroke="#5b6650" stroke-width="1.6" stroke-linecap="round"/>
+<use href="#leaf-b" transform="translate(235.2 527.5) rotate(-145.5) scale(0.76)" fill="#687560"/>
+<use href="#leaf-b" transform="translate(233.7 500.8) rotate(-47.1) scale(0.82)" fill="#4d5943"/>
+<use href="#leaf-b" transform="translate(231.8 473.5) rotate(-156.7) scale(0.97)" fill="#4d5943"/>
+<use href="#leaf-b" transform="translate(230.0 445.6) rotate(-34.4) scale(1.04)" fill="#687560"/>
+<use href="#leaf-b" transform="translate(228.5 416.7) rotate(-156.4) scale(0.87)" fill="#5f6b53"/>
+<use href="#leaf-b" transform="translate(227.8 386.6) rotate(-42.4) scale(0.90)" fill="#56624b"/>
+<use href="#leaf-b" transform="translate(228.2 355.1) rotate(-142.7) scale(0.77)" fill="#4d5943"/>
+<use href="#leaf-b" transform="translate(230.1 322.0) rotate(-34.6) scale(0.58)" fill="#4d5943"/>
+<use href="#leaf-b" transform="translate(233.9 287.0) rotate(-139.5) scale(0.50)" fill="#5f6b53"/>
+<use href="#leaf-b" transform="translate(240.0 250.0) rotate(-20.3) scale(0.52)" fill="#56624b"/>
+<use href="#leaf-b" transform="translate(240 250) rotate(-79.1) scale(0.76)" fill="#56624b"/></svg></div>
+        <div class="umbral__plant umbral__plant--r" data-src="img/planta-derecha.png" aria-hidden="true"><svg focusable="false" viewBox="0 0 400 560"><path d="M230 560C230 420 170 300 120 120" fill="none" stroke="#5b6650" stroke-width="1.6" stroke-linecap="round"/>
+<use href="#leaf-b" transform="translate(227.5 510.3) rotate(-140.1) scale(0.86)" fill="#56624b"/>
+<use href="#leaf-b" transform="translate(224.7 486.4) rotate(-58.6) scale(1.03)" fill="#4d5943"/>
+<use href="#leaf-b" transform="translate(220.8 462.6) rotate(-150.0) scale(1.20)" fill="#5f6b53"/>
+<use href="#leaf-b" transform="translate(216.0 438.9) rotate(-63.5) scale(1.17)" fill="#56624b"/>
+<use href="#leaf-b" transform="translate(210.5 415.0) rotate(-146.8) scale(1.24)" fill="#56624b"/>
+<use href="#leaf-b" transform="translate(204.2 391.0) rotate(-50.8) scale(1.15)" fill="#5f6b53"/>
+<use href="#leaf-b" transform="translate(197.3 366.7) rotate(-157.1) scale(1.27)" fill="#56624b"/>
+<use href="#leaf-b" transform="translate(189.8 342.1) rotate(-57.7) scale(1.19)" fill="#5f6b53"/>
+<use href="#leaf-b" transform="translate(181.8 316.9) rotate(-146.8) scale(1.25)" fill="#4d5943"/>
+<use href="#leaf-b" transform="translate(173.5 291.3) rotate(-61.8) scale(1.10)" fill="#4d5943"/>
+<use href="#leaf-b" transform="translate(164.8 264.9) rotate(-157.4) scale(1.04)" fill="#56624b"/>
+<use href="#leaf-b" transform="translate(155.9 237.8) rotate(-58.4) scale(0.92)" fill="#4d5943"/>
+<use href="#leaf-b" transform="translate(146.9 209.9) rotate(-147.6) scale(0.81)" fill="#56624b"/>
+<use href="#leaf-b" transform="translate(137.9 181.0) rotate(-56.7) scale(0.69)" fill="#687560"/>
+<use href="#leaf-b" transform="translate(128.9 151.1) rotate(-159.9) scale(0.68)" fill="#687560"/>
+<use href="#leaf-b" transform="translate(120.0 120.0) rotate(-60.3) scale(0.65)" fill="#5f6b53"/>
+<use href="#leaf-b" transform="translate(120 120) rotate(-105.5) scale(1.00)" fill="#56624b"/>
+<path d="M240 560C250 430 320 330 360 170" fill="none" stroke="#5b6650" stroke-width="1.6" stroke-linecap="round"/>
+<use href="#leaf-b" transform="translate(246.0 514.3) rotate(-131.4) scale(0.77)" fill="#65725a"/>
+<use href="#leaf-b" transform="translate(251.4 489.4) rotate(-28.0) scale(0.98)" fill="#88957a"/>
+<use href="#leaf-b" transform="translate(257.9 464.8) rotate(-117.7) scale(1.10)" fill="#6f7c62"/>
+<use href="#leaf-b" transform="translate(265.4 440.4) rotate(-23.6) scale(0.99)" fill="#65725a"/>
+<use href="#leaf-b" transform="translate(273.8 416.0) rotate(-111.3) scale(1.09)" fill="#6f7c62"/>
+<use href="#leaf-b" transform="translate(282.9 391.4) rotate(-12.0) scale(1.01)" fill="#65725a"/>
+<use href="#leaf-b" transform="translate(292.5 366.6) rotate(-113.4) scale(1.04)" fill="#88957a"/>
+<use href="#leaf-b" transform="translate(302.4 341.3) rotate(-19.0) scale(1.01)" fill="#6f7c62"/>
+<use href="#leaf-b" transform="translate(312.6 315.3) rotate(-125.8) scale(0.94)" fill="#6f7c62"/>
+<use href="#leaf-b" transform="translate(322.7 288.6) rotate(-30.5) scale(0.88)" fill="#88957a"/>
+<use href="#leaf-b" transform="translate(332.7 260.8) rotate(-114.5) scale(0.72)" fill="#65725a"/>
+<use href="#leaf-b" transform="translate(342.3 231.9) rotate(-33.8) scale(0.61)" fill="#7d8a6f"/>
+<use href="#leaf-b" transform="translate(351.5 201.7) rotate(-124.2) scale(0.60)" fill="#7d8a6f"/>
+<use href="#leaf-b" transform="translate(360.0 170.0) rotate(-22.6) scale(0.56)" fill="#7d8a6f"/>
+<use href="#leaf-b" transform="translate(360 170) rotate(-76.0) scale(0.88)" fill="#6f7c62"/>
+<path d="M236 560C236 470 215 380 240 250" fill="none" stroke="#5b6650" stroke-width="1.6" stroke-linecap="round"/>
+<use href="#leaf-b" transform="translate(235.2 527.5) rotate(-145.5) scale(0.76)" fill="#687560"/>
+<use href="#leaf-b" transform="translate(233.7 500.8) rotate(-47.1) scale(0.82)" fill="#4d5943"/>
+<use href="#leaf-b" transform="translate(231.8 473.5) rotate(-156.7) scale(0.97)" fill="#4d5943"/>
+<use href="#leaf-b" transform="translate(230.0 445.6) rotate(-34.4) scale(1.04)" fill="#687560"/>
+<use href="#leaf-b" transform="translate(228.5 416.7) rotate(-156.4) scale(0.87)" fill="#5f6b53"/>
+<use href="#leaf-b" transform="translate(227.8 386.6) rotate(-42.4) scale(0.90)" fill="#56624b"/>
+<use href="#leaf-b" transform="translate(228.2 355.1) rotate(-142.7) scale(0.77)" fill="#4d5943"/>
+<use href="#leaf-b" transform="translate(230.1 322.0) rotate(-34.6) scale(0.58)" fill="#4d5943"/>
+<use href="#leaf-b" transform="translate(233.9 287.0) rotate(-139.5) scale(0.50)" fill="#5f6b53"/>
+<use href="#leaf-b" transform="translate(240.0 250.0) rotate(-20.3) scale(0.52)" fill="#56624b"/>
+<use href="#leaf-b" transform="translate(240 250) rotate(-79.1) scale(0.76)" fill="#56624b"/></svg></div>
+        <div class="umbral__progress" aria-hidden="true"></div>
+
+        <div class="umbral__copy">
+          <div class="rehab-mark" aria-hidden="true">
+            <svg viewBox="-2 -2 294 54" focusable="false">
+              <path d="M0 50V0H20a12 12 0 0 1 0 24H0M16 24L34 50"/>
+              <path d="M98 0H64V50H98M64 25H92"/>
+              <path d="M128 0V50M162 0V50M128 25H162"/>
+              <path d="M192 50L209 0L226 50"/>
+              <path class="a-bar" d="M199 30H219"/>
+              <path d="M256 0H274a11 11 0 0 1 0 22H256M256 22H277a14 14 0 0 1 0 28H256V0"/>
+            </svg>
+            <small>BY ANGEL JUAN</small>
+          </div>
+          <div class="umbral__steps">
+            <p>Primero, tratamos tu dolor.</p>
+            <p>Después, <em>cruzas al otro lado.</em></p>
+            <p>Y recuperas tu fuerza.</p>
+          </div>
+          <p class="umbral__hint" aria-hidden="true">Sigue bajando</p>
+        </div>
+      </div>
+    </section>
+
+    <!-- ============ 4. Etapa 2 · REHAB ============ -->
+    <section class="section theme-dark" id="rehab" data-theme-section="dark" data-brand="rehab" aria-labelledby="rehab-title">
+      <div class="container">
+        <div class="rehab-intro">
+          <div style="display:grid; gap:1.6rem; justify-items:start">
+            <p class="stage reveal"><b>Etapa 2</b> · REHAB by Ángel Juan</p>
+            <p class="logo-rehab reveal" aria-label="REHAB by Ángel Juan"><span class="logo-rehab__word" aria-hidden="true">REHΛB</span><span class="logo-rehab__by" aria-hidden="true">BY ANGEL JUAN</span></p>
+            <h2 class="lema reveal" id="rehab-title" style="--d:.08s">Recupera, gana fuerza y <em>rinde mejor</em></h2>
+            <div class="led-rule reveal" aria-hidden="true"></div>
+            <p class="lead reveal" style="--d:.12s">Nuestro centro de readaptación, rehabilitación y rendimiento. Medimos tu punto de partida y tu evolución, y ajustamos el plan con datos.</p>
+            <a class="btn reveal" href="https://wa.me/[TELÉFONO]?text=Hola%2C%20quiero%20reservar%20mi%20valoraci%C3%B3n%20inicial%20en%20Rehab"><svg aria-hidden="true"><use href="#i-whatsapp"/></svg> Reservar valoración inicial</a>
+          </div>
+          <div class="ph reveal" style="--d:.1s" data-img="img/rehab-sala.jpg" role="img" aria-label="Sala de REHAB con techo oscuro y luz LED cálida indirecta"><span class="ph__label">img/rehab-sala.jpg</span></div>
+        </div>
+
+        <ul class="cards" role="list">
+          <li class="card reveal">
+            <div class="card__top"><svg class="card__icon" viewBox="0 0 48 48" fill="none" stroke="currentColor" stroke-width="1.2" aria-hidden="true"><path d="M6 40h36"/><path d="M11 40V30M19 40V22M27 40V26M35 40V14"/></svg></div>
+            <h3 class="h3">Valoración funcional</h3>
+            <p>Pruebas objetivas de fuerza, movilidad y control para conocer tu punto de partida real.</p>
+          </li>
+          <li class="card reveal" style="--d:.08s">
+            <div class="card__top"><svg class="card__icon" viewBox="0 0 48 48" fill="none" stroke="currentColor" stroke-width="1.2" aria-hidden="true"><path d="M8 34c6-14 12-20 16-20s10 6 16 20"/><circle cx="24" cy="14" r="3"/></svg></div>
+            <h3 class="h3">Rehabilitación de lesiones</h3>
+            <p>Tras una lesión o una cirugía, recuperamos la función de forma progresiva y controlada.</p>
+          </li>
+          <li class="card reveal" style="--d:.16s">
+            <div class="card__top"><svg class="card__icon" viewBox="0 0 48 48" fill="none" stroke="currentColor" stroke-width="1.2" aria-hidden="true"><path d="M6 24h36"/><rect x="9" y="16" width="5" height="16" rx="1"/><rect x="34" y="16" width="5" height="16" rx="1"/><path d="M14 20v8M34 20v8"/></svg></div>
+            <h3 class="h3">Fuerza y prevención</h3>
+            <p>Entrenamiento de fuerza individualizado para proteger tus articulaciones y reducir recaídas.</p>
+          </li>
+          <li class="card reveal">
+            <div class="card__top"><svg class="card__icon" viewBox="0 0 48 48" fill="none" stroke="currentColor" stroke-width="1.2" aria-hidden="true"><path d="M6 36 18 24l8 6 16-16"/><path d="M34 14h8v8"/></svg></div>
+            <h3 class="h3">Readaptación deportiva</h3>
+            <p>El puente entre la recuperación y la competición: vuelves al deporte cuando los datos lo confirman.</p>
+          </li>
+          <li class="card reveal" style="--d:.08s">
+            <div class="card__top"><svg class="card__icon" viewBox="0 0 48 48" fill="none" stroke="currentColor" stroke-width="1.2" aria-hidden="true"><circle cx="24" cy="26" r="15"/><path d="M24 26l7-7M21 8h6"/></svg></div>
+            <h3 class="h3">Rendimiento</h3>
+            <p>Para quien quiere rendir más: planificación, control de cargas y seguimiento de tu progreso.</p>
+          </li>
+          <li class="card card--feature reveal" style="--d:.16s">
+            <div class="card__top"><svg class="card__icon" aria-hidden="true"><use href="#i-whatsapp"/></svg></div>
+            <h3 class="h3">Empieza por tu valoración inicial</h3>
+            <p>Es el primer paso de cualquier plan: sabremos de dónde partes y hacia dónde vamos.</p>
+            <a class="link-arrow" href="https://wa.me/[TELÉFONO]?text=Hola%2C%20quiero%20reservar%20mi%20valoraci%C3%B3n%20inicial%20en%20Rehab" style="margin-top:auto; align-self:flex-start">Reservar <span aria-hidden="true">→</span></a>
+          </li>
+        </ul>
+      </div>
+    </section>
+
+    <!-- ============ Cómo trabajamos (REHAB) ============ -->
+    <section class="section theme-dark section--surface" id="metodo" data-theme-section="dark" data-brand="rehab" aria-labelledby="metodo-title">
+      <div class="container">
+        <div class="section-head">
+          <p class="eyebrow reveal">Cómo trabajamos</p>
+          <h2 class="h2 reveal" id="metodo-title" style="--d:.08s">Medimos tu punto de partida <em>y tu evolución</em></h2>
+          <div class="led-rule reveal" style="--d:.12s" aria-hidden="true"></div>
+        </div>
+        <div class="method">
+          <ol class="steps reveal" role="list">
+            <li class="step"><span class="step__n" aria-hidden="true">01</span><h3>Valoración inicial</h3><p>Entrevista, exploración y pruebas objetivas. Obtenemos las cifras de las que partimos.</p></li>
+            <li class="step"><span class="step__n" aria-hidden="true">02</span><h3>Plan individual</h3><p>Objetivos claros y un programa adaptado a tu lesión, tu vida y tu deporte.</p></li>
+            <li class="step"><span class="step__n" aria-hidden="true">03</span><h3>Reevaluación</h3><p>Repetimos las pruebas periódicamente para ver tu progreso y ajustar el plan.</p></li>
+          </ol>
+
+          <!-- Gráfica de EJEMPLO: se dibuja a partir de la tabla de abajo.
+               Si se cambian los datos, actualizar también el texto de #chart-desc. -->
+          <figure class="chart-card reveal" style="--d:.1s" data-chart data-target="90" data-unit=" %">
+            <span class="tag-example">Ejemplo ilustrativo</span>
+            <div class="chart-card__head">
+              <div>
+                <p class="chart-card__title" id="chart-title">Fuerza de la pierna lesionada</p>
+                <p class="chart-card__sub" id="chart-desc">% respecto a la pierna sana, en cada reevaluación. Pasa de 58 % en la valoración inicial a 97 % en la semana 12.</p>
+              </div>
+              <div class="chart-kpi">
+                <p class="chart-kpi__value" data-kpi>+39 pts</p>
+                <p class="chart-kpi__label">en 12 semanas</p>
+              </div>
+            </div>
+            <div class="chart" aria-describedby="chart-desc"></div>
+            <div class="chart-tooltip" aria-hidden="true"></div>
+            <figcaption class="chart-foot">
+              <span>Datos de ejemplo, no corresponden a un paciente real.</span>
+              <details class="chart-data">
+                <summary>Ver datos</summary>
+                <table>
+                  <caption class="visually-hidden">Evolución de ejemplo de la fuerza de la pierna lesionada</caption>
+                  <thead><tr><th scope="col">Semana</th><th scope="col">Momento</th><th scope="col">% pierna sana</th></tr></thead>
+                  <tbody>
+                    <tr><td data-value="0">Sem. 0</td><td>Valoración inicial</td><td>58</td></tr>
+                    <tr><td data-value="3">Sem. 3</td><td>Reevaluación 1</td><td>67</td></tr>
+                    <tr><td data-value="6">Sem. 6</td><td>Reevaluación 2</td><td>78</td></tr>
+                    <tr><td data-value="9">Sem. 9</td><td>Reevaluación 3</td><td>89</td></tr>
+                    <tr><td data-value="12">Sem. 12</td><td>Reevaluación 4</td><td>97</td></tr>
+                  </tbody>
+                </table>
+              </details>
+            </figcaption>
+          </figure>
+        </div>
+      </div>
+    </section>
+
+    <!-- ============ Equipo (de los dos centros) ============ -->
+    <section class="section theme-dark" id="equipo" data-theme-section="dark" data-brand="rehab" aria-labelledby="equipo-title">
+      <div class="container">
+        <div class="section-head">
+          <p class="eyebrow reveal">Un mismo equipo</p>
+          <h2 class="h2 reveal" id="equipo-title" style="--d:.08s">Te conocemos <em>de principio a fin</em></h2>
+        </div>
+        <ul class="team" role="list" aria-label="Equipo" tabindex="0">
+          <li class="member reveal">
+            <div class="ph" data-img="img/equipo-angel-juan.jpg" role="img" aria-label="Retrato de Ángel Juan"><span class="ph__label">Foto real · Ángel Juan</span></div>
+            <span class="member__center">Clínica · REHAB</span>
+            <h3 class="h3">Ángel Juan</h3>
+            <p class="member__role">Fisioterapeuta · Fundador</p>
+            <p class="member__meta">Nº colegiado [Nº COLEGIADO]</p>
+          </li>
+          <li class="member reveal" style="--d:.08s">
+            <div class="ph" data-img="img/equipo-2.jpg" role="img" aria-label="Retrato de [NOMBRE FISIO 2]"><span class="ph__label">Foto real · equipo 2</span></div>
+            <span class="member__center">Clínica</span>
+            <h3 class="h3">[NOMBRE FISIO 2]</h3>
+            <p class="member__role">[CARGO / ESPECIALIDAD]</p>
+            <p class="member__meta">Nº colegiado [Nº COLEGIADO]</p>
+          </li>
+          <li class="member reveal" style="--d:.16s">
+            <div class="ph" data-img="img/equipo-3.jpg" role="img" aria-label="Retrato de [NOMBRE READAPTADOR]"><span class="ph__label">Foto real · equipo 3</span></div>
+            <span class="member__center">REHAB</span>
+            <h3 class="h3">[NOMBRE READAPTADOR]</h3>
+            <p class="member__role">[CARGO / TITULACIÓN]</p>
+            <p class="member__meta">[Nº COLEGIADO / FORMACIÓN]</p>
+          </li>
+          <li class="member reveal" style="--d:.24s">
+            <div class="ph" data-img="img/equipo-4.jpg" role="img" aria-label="Retrato de [NOMBRE PROFESIONAL 4]"><span class="ph__label">Foto real · equipo 4</span></div>
+            <span class="member__center">[CENTRO]</span>
+            <h3 class="h3">[NOMBRE PROFESIONAL 4]</h3>
+            <p class="member__role">[CARGO / TITULACIÓN]</p>
+            <p class="member__meta">[Nº COLEGIADO / FORMACIÓN]</p>
+          </li>
+        </ul>
+      </div>
+    </section>
+
+    <!-- ============ Reseñas de Google ============ -->
+    <section class="section theme-dark section--surface" id="opiniones" data-theme-section="dark" data-brand="rehab" aria-labelledby="opiniones-title">
+      <div class="container">
+        <div class="reviews-head">
+          <div class="section-head" style="margin:0">
+            <p class="eyebrow reveal">Opiniones en Google</p>
+            <h2 class="h2 reveal" id="opiniones-title" style="--d:.08s">Lo que dicen <em>nuestros pacientes</em></h2>
+          </div>
+          <div class="rating reveal" style="--d:.12s">
+            <span class="rating__score">[4,X]</span>
+            <div class="rating__meta">
+              <span class="stars" aria-hidden="true"><svg><use href="#i-star"/></svg><svg><use href="#i-star"/></svg><svg><use href="#i-star"/></svg><svg><use href="#i-star"/></svg><svg><use href="#i-star"/></svg></span><br>
+              [Nº RESEÑAS] reseñas en Google
+            </div>
+          </div>
+        </div>
+        <div class="reviews" role="list" aria-label="Reseñas de pacientes" tabindex="0">
+          <figure class="review reveal" role="listitem">
+            <span class="stars" role="img" aria-label="[ESTRELLAS] de 5 estrellas"><svg aria-hidden="true"><use href="#i-star"/></svg><svg aria-hidden="true"><use href="#i-star"/></svg><svg aria-hidden="true"><use href="#i-star"/></svg><svg aria-hidden="true"><use href="#i-star"/></svg><svg aria-hidden="true"><use href="#i-star"/></svg></span>
+            <blockquote><p>“[RESEÑA REAL 1] — texto literal de una reseña de Google, idealmente de dos a cuatro líneas.”</p></blockquote>
+            <figcaption><span class="avatar" aria-hidden="true">A</span><span><strong>[NOMBRE AUTOR 1]</strong><br><span class="source">Google · [CLÍNICA / REHAB] · [FECHA]</span></span></figcaption>
+          </figure>
+          <figure class="review reveal" role="listitem" style="--d:.08s">
+            <span class="stars" role="img" aria-label="[ESTRELLAS] de 5 estrellas"><svg aria-hidden="true"><use href="#i-star"/></svg><svg aria-hidden="true"><use href="#i-star"/></svg><svg aria-hidden="true"><use href="#i-star"/></svg><svg aria-hidden="true"><use href="#i-star"/></svg><svg aria-hidden="true"><use href="#i-star"/></svg></span>
+            <blockquote><p>“[RESEÑA REAL 2] — texto literal de una reseña de Google, idealmente de dos a cuatro líneas.”</p></blockquote>
+            <figcaption><span class="avatar" aria-hidden="true">B</span><span><strong>[NOMBRE AUTOR 2]</strong><br><span class="source">Google · [CLÍNICA / REHAB] · [FECHA]</span></span></figcaption>
+          </figure>
+          <figure class="review reveal" role="listitem" style="--d:.16s">
+            <span class="stars" role="img" aria-label="[ESTRELLAS] de 5 estrellas"><svg aria-hidden="true"><use href="#i-star"/></svg><svg aria-hidden="true"><use href="#i-star"/></svg><svg aria-hidden="true"><use href="#i-star"/></svg><svg aria-hidden="true"><use href="#i-star"/></svg><svg aria-hidden="true"><use href="#i-star"/></svg></span>
+            <blockquote><p>“[RESEÑA REAL 3] — texto literal de una reseña de Google, idealmente de dos a cuatro líneas.”</p></blockquote>
+            <figcaption><span class="avatar" aria-hidden="true">C</span><span><strong>[NOMBRE AUTOR 3]</strong><br><span class="source">Google · [CLÍNICA / REHAB] · [FECHA]</span></span></figcaption>
+          </figure>
+        </div>
+        <p style="margin-top:2rem"><a class="link-arrow" href="[ENLACE FICHA GOOGLE]">Ver todas las reseñas <span aria-hidden="true">→</span></a></p>
+      </div>
+    </section>
+
+    <!-- ============ Los dos centros: ubicación y horario ============ -->
+    <section class="section theme-dark" id="contacto" data-theme-section="dark" data-brand="rehab" aria-labelledby="contacto-title">
+      <div class="container">
+        <div class="section-head">
+          <p class="eyebrow reveal">Visítanos</p>
+          <h2 class="h2 reveal" id="contacto-title" style="--d:.08s">Dos centros <em>en Alzira</em></h2>
+        </div>
+        <div class="centers">
+          <article class="center-card theme-light reveal" aria-labelledby="c1">
+            <div class="map">
+              <div class="ph" aria-hidden="true"><span class="ph__label">Mapa · Carrer Gandia, 23</span></div>
+              <iframe title="Mapa: Clínica Ángel Juan, Carrer Gandia 23, Alzira" loading="lazy" referrerpolicy="no-referrer-when-downgrade"
+                src="https://maps.google.com/maps?q=Carrer%20Gandia%2023%2C%20Alzira%2C%20Valencia&amp;z=16&amp;output=embed"></iframe>
+            </div>
+            <h3 class="center-card__name" id="c1">Clínica Ángel Juan</h3>
+            <div>
+              <div class="info-block">
+                <h3>Dirección</h3>
+                <address>Carrer Gandia, 23<br>Alzira, Valencia</address>
+              </div>
+              <div class="info-block">
+                <h3>Horario</h3>
+                <dl class="hours"><dt>Lunes a viernes</dt><dd>[HORARIO L–V]</dd><dt>Sábado</dt><dd>[HORARIO SÁBADO]</dd></dl>
+              </div>
+              <div class="info-actions">
+                <a class="btn" href="https://wa.me/[TELÉFONO]?text=Hola%2C%20quiero%20pedir%20cita%20en%20la%20cl%C3%ADnica"><svg aria-hidden="true"><use href="#i-whatsapp"/></svg> Pedir cita</a>
+                <a class="btn btn--ghost" href="https://www.google.com/maps/dir/?api=1&amp;destination=Carrer%20Gandia%2023%2C%20Alzira%2C%20Valencia" target="_blank" rel="noopener">Cómo llegar<span class="visually-hidden"> (abre Google Maps en otra pestaña)</span></a>
+              </div>
+            </div>
+          </article>
+
+          <article class="center-card reveal" style="--d:.1s" aria-labelledby="c2">
+            <div class="map">
+              <!-- Cuando tengamos la dirección, añadir aquí el iframe de Google Maps como en la clínica -->
+              <div class="ph" aria-hidden="true"><span class="ph__label">Mapa · [DIRECCIÓN REHAB]</span></div>
+            </div>
+            <h3 class="center-card__name" id="c2">REHAB by Ángel Juan</h3>
+            <div>
+              <div class="info-block">
+                <h3>Dirección</h3>
+                <address>[DIRECCIÓN REHAB]<br>Alzira, Valencia</address>
+              </div>
+              <div class="info-block">
+                <h3>Horario</h3>
+                <dl class="hours"><dt>Lunes a viernes</dt><dd>[HORARIO L–V]</dd><dt>Sábado</dt><dd>[HORARIO SÁBADO]</dd></dl>
+              </div>
+              <div class="info-actions">
+                <a class="btn" href="https://wa.me/[TELÉFONO]?text=Hola%2C%20quiero%20reservar%20mi%20valoraci%C3%B3n%20inicial%20en%20Rehab"><svg aria-hidden="true"><use href="#i-whatsapp"/></svg> Reservar valoración</a>
+                <a class="btn btn--ghost" href="[ENLACE CÓMO LLEGAR REHAB]">Cómo llegar</a>
+              </div>
+            </div>
+          </article>
+        </div>
+        <p class="muted reveal" style="margin-top:2rem">Teléfono <a href="tel:[TELÉFONO]">[TELÉFONO]</a> · Email <a href="mailto:[EMAIL]">[EMAIL]</a></p>
+      </div>
+    </section>
+  </main>
+
+  <footer class="site-footer">
+    <div class="container">
+      <div class="footer-grid">
+        <div>
+          <p class="brand-duo" style="margin-bottom:1.25rem"><span class="brand-duo__name">Ángel Juan</span><span class="brand-duo__subs" style="color:#b4a898">Clínica <i></i> REHΛB</span></p>
+          <p>Fisioterapia, osteopatía, readaptación y rendimiento.<br>En Alzira desde 2006.</p>
+        </div>
+        <div>
+          <h2>Clínica</h2>
+          <ul role="list"><li><a href="#clinica">Tratamientos</a></li><li><a href="#contacto">Carrer Gandia, 23</a></li></ul>
+        </div>
+        <div>
+          <h2>REHAB</h2>
+          <ul role="list"><li><a href="#rehab">Servicios</a></li><li><a href="#metodo">Cómo trabajamos</a></li></ul>
+        </div>
+      </div>
+      <div class="footer-legal">
+        <p>© <span data-year>2026</span> Ángel Juan · Clínica y REHAB</p>
+        <ul role="list"><li><a href="#">Aviso legal</a></li><li><a href="#">Privacidad</a></li><li><a href="#">Cookies</a></li></ul>
+      </div>
+    </div>
+  </footer>
+
+  <!-- WhatsApp flotante: el mensaje cambia según el centro que estés viendo -->
+  <a class="wa-fab" data-wa-dynamic href="https://wa.me/[TELÉFONO]?text=Hola%2C%20quiero%20pedir%20cita%20en%20la%20cl%C3%ADnica" aria-label="Pedir cita en la clínica por WhatsApp">
+    <svg aria-hidden="true"><use href="#i-whatsapp"/></svg>
+    <span class="wa-fab__text" aria-hidden="true" data-wa-label>Pedir cita</span>
+  </a>
+
+  <script src="../shared/base.js"></script>
+  <script src="js/site.js"></script>
+  <script src="js/chart.js"></script>
+</body>
+</html>
