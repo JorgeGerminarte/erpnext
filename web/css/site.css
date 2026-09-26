@@ -397,3 +397,11 @@
 .umbral__plant.is-img { width: min(82vw, 46rem); bottom: -8%; }
 .umbral__hint { text-shadow: 0 0 14px rgba(245, 239, 231, 0.9); }
 .umbral:not([data-step="1"]) .umbral__hint { text-shadow: 0 0 14px rgba(20, 18, 16, 0.9); }
+
+/* Cinco reseñas: 3 arriba y 2 abajo en escritorio */
+@media (min-width: 900px) {
+  #opiniones .reviews { grid-template-columns: repeat(6, 1fr); }
+  #opiniones .review { grid-column: span 2; }
+  #opiniones .review:nth-child(n + 4) { grid-column: span 3; }
+}
+#opiniones .review blockquote { font-size: 1.15rem; }
