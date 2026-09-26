@@ -265,7 +265,7 @@
 /* Logotipo REHAB: la barra de la A desaparece → Λ */
 .rehab-mark { display: grid; justify-items: center; gap: 0.6rem; color: #eee7dd; opacity: clamp(0, calc((var(--p) - 0.66) * 6), 1); }
 .rehab-mark svg { width: min(72vw, 22rem); height: auto; overflow: visible; }
-.rehab-mark path { fill: none; stroke: currentColor; stroke-width: 1.6; stroke-linecap: square; stroke-linejoin: miter; }
+.rehab-mark path { fill: none; stroke: currentColor; stroke-width: 3; stroke-linecap: butt; stroke-linejoin: miter; }
 .rehab-mark .a-bar { transform-box: fill-box; transform-origin: center; transform: scaleX(clamp(0, calc((0.9 - var(--p)) * 8), 1)); }
 .rehab-mark small { font-size: 0.62rem; letter-spacing: 0.5em; margin-right: -0.5em; color: #b4a898; }
 
@@ -283,9 +283,9 @@
 .motion-lite .umbral__hint { display: none; }
 
 /* ---------- REHAB ---------- */
-.logo-rehab { display: inline-grid; justify-items: start; gap: 0.5rem; line-height: 1; }
-.logo-rehab__word { font-family: "Jost", sans-serif; font-weight: 300; font-size: clamp(2.2rem, 10vw, 3.4rem); letter-spacing: 0.55em; margin-right: -0.55em; }
-.logo-rehab__by { font-size: 0.62rem; letter-spacing: 0.5em; color: var(--c-muted); }
+/* Logotipo REHAB redibujado del original: letras anchas, "BY ANGEL JUAN" centrado */
+.logo-rehab { display: block; line-height: 0; color: var(--c-text); }
+.logo-rehab svg { width: clamp(13rem, 62vw, 21rem); height: auto; aspect-ratio: 442 / 92; overflow: visible; }
 .lema { font-size: clamp(1.9rem, 7vw, 3.4rem); font-weight: 300; letter-spacing: -0.02em; line-height: 1.1; max-width: 16ch; }
 .lema em { font-style: normal; color: var(--c-accent-strong); }
 .led-rule { width: 3.5rem; height: 2px; border-radius: 2px; background: var(--c-led); box-shadow: 0 0 14px 1px var(--c-led-glow); }
